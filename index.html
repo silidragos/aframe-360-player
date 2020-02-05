@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>Roci Vulcanice</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+        <!-- <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"></!-->
+        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    </head>
+    <body>
+        <button id="start-video">
+            Start
+        </button>
+
+        <a-scene>
+            <a-assets>
+                <video
+                    id="video"
+                    crossorigin="anonymous"
+                    preload="auto"
+                    src="./video/Etna Edit-2.mp4"
+                    playsinline
+                    webkit-playsinline
+                ></video>
+
+                <video
+                    id="video_2"
+                    crossorigin="anonymous"
+                    preload="auto"
+                    src="./video/overall-big_1.mp4"
+                    playsinline
+                    webkit-playsinline
+                ></video>
+
+                <img id="hotspot" src="./img/volcano.png" />
+                <img id="play-icon" src="./img/play.png" />
+                <img id="pause-icon" src="./img/pause.png" />
+            </a-assets>
+
+            <a-videosphere id="skybox" rotation="0 270 0" src="#video"></a-videosphere>
+            <a-entity id="controls-wrapper">
+                <a-image
+                    id="video-control"
+                    class="raycastable control"
+                    video-360-play-pause
+                    position="-0.5 1.25 -2"
+                    scale="0.4 0.4 0.4"
+                    src="#hotspot"
+                    look-at="#cam"
+                >
+                </a-image>
+            </a-entity>
+
+            <a-entity id="spots" hotspots>
+                <a-entity id="group-point1">
+                    <a-image
+                        class="raycastable hotspot"
+                        spot="linkto:#video_2;spotgroup:group-point2"
+                        position="0.5 1.25 -2"
+                        scale="0.4 0.4 0.4"
+                    ></a-image>
+                </a-entity>
+                <!-- <a-entity id="group-point2" scale="0 0 0">
+                    <a-image class="hotspot" spot="linkto:#point1;spotgroup:group-point1" position="10 0 -8"></a-image>
+                    <a-image class="hotspot" spot="linkto:#point3;spotgroup:group-point3" position="0 0 10"></a-image>
+                </a-entity>
+                <a-entity id="group-point3" scale="0 0 0">
+                    <a-image class="hotspot" spot="linkto:#point2;spotgroup:group-point2" position="10 0 3"></a-image>
+                    <a-image class="hotspot" spot="linkto:#point4;spotgroup:group-point4" position="-10 0 -3"></a-image>
+                </a-entity>
+                <a-entity id="group-point4" scale="0 0 0">
+                    <a-image class="hotspot" spot="linkto:#point3;spotgroup:group-point3" position="0 0 -10"></a-image>
+                </a-entity> -->
+            </a-entity>
+
+            <a-entity id="cam" camera position="0 0 0" look-controls>
+                <a-entity
+                    cursor="fuse:true;fuseTimeout:2000"
+                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                    position="0 0 -1.8"
+                    material="shader:flat;color:#ff0000"
+                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                    raycaster="objects:.raycastable; far: 100;"
+                >
+                </a-entity>
+            </a-entity>
+        </a-scene>
+
+        <script src="hotspot.js"></script>
+        <script src="play-on-window-click.js"></script>
+        <script src="video-controls.js"></script>
+    </body>
+</html>
