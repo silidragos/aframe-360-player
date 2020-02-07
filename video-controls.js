@@ -44,10 +44,37 @@ AFRAME.registerComponent('video-360-play-pause', {
     }
 });
 
+AFRAME.registerComponent('auto-stop-at-times', {
+    schema: {
+        stopTimes: {
+            default: [],
+            parse: function(value) {
+                return value.split('/');
+            }
+        },
+        currentIdx: {
+            default: 0
+        }
+    },
+    init: function() {
+        console.log(this.data.stopTimes);
+        var video = document.getElementById('skybox').components.material.material.map.image;
+        video.addEventListener(
+            'timeupdate',
+            function() {
+                if (video.currentTime > parseFloat(this.data.stopTimes[this.data.currentIdx])) {
+                    this.data.currentIdx++;
+                    document.getElementById('video-control').emit('pauseVideo');
+                }
+            }.bind(this)
+        );
+    }
+});
+
 document.getElementById('start-video').addEventListener('click', function() {
     document.getElementById('start-video').style.display = 'none';
     document.getElementById('skybox').components.material.material.map.image.play();
     setTimeout(() => {
         document.getElementById('skybox').components.material.material.map.image.pause();
-    }, 1000);
+    }, 250);
 });
