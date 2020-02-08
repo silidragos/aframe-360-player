@@ -57,7 +57,6 @@ AFRAME.registerComponent('auto-stop-at-times', {
         }
     },
     init: function() {
-        console.log(this.data.stopTimes);
         var video = document.getElementById('skybox').components.material.material.map.image;
         video.addEventListener(
             'timeupdate',
