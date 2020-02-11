@@ -12,10 +12,11 @@ AFRAME.registerComponent('hotspots', {
 AFRAME.registerComponent('spot', {
     schema: {
         linkto: { type: 'string', default: '' },
-        spotgroup: { type: 'string', default: '' }
+        spotgroup: { type: 'string', default: '' },
+        imageLink: { type: 'string', default: '#hotspot' }
     },
     init: function() {
-        this.el.setAttribute('src', '#hotspot');
+        this.el.setAttribute('src', this.data.imageLink);
         this.el.setAttribute('look-at', '#cam');
 
         var data = this.data;
