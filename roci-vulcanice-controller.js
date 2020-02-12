@@ -2,9 +2,13 @@ AFRAME.registerComponent('roci-vulcanice-controller', {
     init: function() {
         var spotComp = document.getElementById('spots');
         spotComp.addEventListener('reloadspots', function(evt) {
-            console.log('Got event!');
             let infoPoints = document.getElementById('control-points');
             infoPoints.setAttribute('visible', true);
+        });
+
+        document.getElementById('video-control').addEventListener('click', function(evt) {
+            document.getElementById('control-points').setAttribute('visible', false);
+            document.getElementById('images').setAttribute('visible', false);
         });
     }
 });

@@ -31,6 +31,7 @@
 
                 <img id="play-icon" src="./img/play.png" />
                 <img id="pause-icon" src="./img/pause.png" />
+                <img id="info" src="./img/info.png" />
 
                 <img id="circle" src="./img/circle.png" />
                 <img id="rect" src="./img/rect.png" />
@@ -51,51 +52,121 @@
             </a-entity>
 
             <a-entity id="texts-wrapper" show-hide-after-seconds="from:0; to: 20;">
-                <a-entity position="3 0 -2" look-at="#cam">
-                    <a-entity text="value: Ar; align: center" scale="10 10 10"></a-entity>
-                    <a-image scale="0.75 0.75 0.75" src="#circle"></a-image>
-                </a-entity>
-                <a-entity position="5 0 -1.75" look-at="#cam">
-                    <a-entity text="value: He; align: center" scale="10 10 10"></a-entity>
-                    <a-image scale="0.75 0.75 0.75" src="#circle"></a-image>
-                </a-entity>
-                <a-entity position="3 0 -5" look-at="#cam">
-                    <a-entity text="value: H; align: center" scale="10 10 10"></a-entity>
-                    <a-image scale="0.75 0.75 0.75" src="#circle"></a-image>
-                </a-entity>
-                <a-entity position="-5 0 2" look-at="#cam">
-                    <a-entity text="value: Work bench; align: center" scale="5 5 5 "></a-entity>
-                    <a-image scale="3 0.75 0.75" src="#rect"></a-image>
-                </a-entity>
-                <a-entity scale="1.25 1.25 1.25" position="-7 2 7" look-at="#cam">
-                    <a-entity text="value: Metallic Powders\nDeposit; align: center" scale="5 5 5 "></a-entity>
-                    <a-image scale="3 0.75 0.75" src="#rect"></a-image>
-                </a-entity>
-                <a-entity position="4 -1 5" look-at="#cam">
-                    <a-entity
-                        text="value: Electric bicycle with\nHydrogen Supply; align: center"
-                        scale="5 5 5"
-                    ></a-entity>
-                    <a-image scale="3 0.75 0.75" src="#rect"></a-image>
-                </a-entity>
-                <a-entity position="2 0 5" look-at="#cam">
-                    <a-entity
-                        text="value: Electric scooter with\nHydrogen Supply; align: center"
-                        scale="5 5 5 "
-                    ></a-entity>
-                    <a-image scale="3 0.75 0.75" src="#rect"></a-image>
-                </a-entity>
-            </a-entity>
-
-            <a-entity id="cam" camera position="0 0 0" look-controls>
-                <a-entity
-                    cursor="fuse:true;fuseTimeout:2000"
-                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
-                    position="0 0 -1.8"
-                    material="shader:flat;color:#ff0000"
-                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
-                    raycaster="objects:.raycastable; far: 100;"
+                <a-image
+                    class="raycastable"
+                    position="3 1 -2"
+                    scale="0.4 0.4 0.4"
+                    src="#info"
+                    look-at="#cam"
+                    show-on-hover
                 >
+                    <a-entity position="0 -2 0" look-at="#cam" scale="2.5 2.5 2.5">
+                        <a-entity text="value: Ar; align: center" scale="10 10 10"></a-entity>
+                        <a-image scale="0.75 0.75 0.75" src="#circle"></a-image>
+                    </a-entity>
+                </a-image>
+
+                <a-image
+                    class="raycastable"
+                    position="5 1 -1.75"
+                    scale="0.4 0.4 0.4"
+                    src="#info"
+                    look-at="#cam"
+                    show-on-hover
+                >
+                    <a-entity position="0 -2 0" look-at="#cam" scale="2.5 2.5 2.5">
+                        <a-entity text="value: He; align: center" scale="10 10 10"></a-entity>
+                        <a-image scale="0.75 0.75 0.75" src="#circle"></a-image>
+                    </a-entity>
+                </a-image>
+
+                <a-image
+                    class="raycastable"
+                    position="3 1 -5"
+                    scale="0.4 0.4 0.4"
+                    src="#info"
+                    look-at="#cam"
+                    show-on-hover
+                >
+                    <a-entity position="0 -2 0" look-at="#cam" scale="2.5 2.5 2.5">
+                        <a-entity text="value: H; align: center" scale="10 10 10"></a-entity>
+                        <a-image scale="0.75 0.75 0.75" src="#circle"></a-image>
+                    </a-entity>
+                </a-image>
+
+                <a-image
+                    class="raycastable"
+                    position="-5 1 2"
+                    scale="0.4 0.4 0.4"
+                    src="#info"
+                    look-at="#cam"
+                    show-on-hover
+                >
+                    <a-entity position="0 -2 0" look-at="#cam" scale="2.5 2.5 2.5">
+                        <a-entity text="value: Work bench; align: center" scale="5 5 5 "></a-entity>
+                        <a-image scale="3 0.75 0.75" src="#rect"></a-image>
+                    </a-entity>
+                </a-image>
+
+                <a-image
+                    class="raycastable"
+                    position="-7 3 7"
+                    scale="0.4 0.4 0.4"
+                    src="#info"
+                    look-at="#cam"
+                    show-on-hover
+                >
+                    <a-entity scale="3.5 3.5 3.5" position="0 -2 0" look-at="#cam">
+                        <a-entity text="value: Metallic Powders\nDeposit; align: center" scale="5 5 5 "></a-entity>
+                        <a-image scale="3 0.75 0.75" src="#rect"></a-image>
+                    </a-entity>
+                </a-image>
+
+                <a-image
+                    class="raycastable"
+                    position="4 0 5"
+                    scale="0.4 0.4 0.4"
+                    src="#info"
+                    look-at="#cam"
+                    show-on-hover
+                >
+                    <a-entity position="0 -2 0" look-at="#cam" scale="2.5 2.5 2.5">
+                        <a-entity
+                            text="value: Electric bicycle with\nHydrogen Supply; align: center"
+                            scale="5 5 5"
+                        ></a-entity>
+                        <a-image scale="3 0.75 0.75" src="#rect"></a-image>
+                    </a-entity>
+                </a-image>
+
+                <a-image
+                    class="raycastable"
+                    position="2 2 5"
+                    scale="0.4 0.4 0.4"
+                    src="#info"
+                    look-at="#cam"
+                    show-on-hover
+                >
+                    <a-entity position="0 -2 0" look-at="#cam" scale="2.5 2.5 2.5">
+                        <a-entity
+                            text="value: Electric scooter with\nHydrogen Supply; align: center"
+                            scale="5 5 5 "
+                        ></a-entity>
+                        <a-image scale="3 0.75 0.75" src="#rect"></a-image>
+                    </a-entity>
+                </a-image>
+            </a-entity>
+            <a-entity id="rig" position="0 0 0">
+                <a-entity id="cam" camera look-controls>
+                    <a-entity
+                        cursor="fuse:true;fuseTimeout:2000"
+                        geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                        position="0 0 -1.8"
+                        material="shader:flat;color:#ff0000"
+                        animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                        raycaster="objects:.raycastable; far: 100;"
+                    >
+                    </a-entity>
                 </a-entity>
             </a-entity>
         </a-scene>
@@ -103,6 +174,6 @@
         <script src="hotspot.js"></script>
         <script src="play-on-window-click.js"></script>
         <script src="video-controls.js"></script>
-        <script src="info-points.js"></script>
+        <script src="vr-controller.js"></script>
     </body>
 </html>

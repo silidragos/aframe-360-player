@@ -27,7 +27,6 @@ AFRAME.registerComponent('video-360-play-pause', {
     },
 
     pauseVideo: function() {
-        console.log('Pausing');
         var video = document.getElementById('skybox').components.material.material.map.image;
 
         video.pause();

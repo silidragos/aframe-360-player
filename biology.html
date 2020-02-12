@@ -112,7 +112,7 @@
                 >
                 </a-image>
 
-                <a-entity id="spots" hotspots >
+                <a-entity id="spots" hotspots>
                     <!-- Haltere -->
                     <a-entity id="group-point1">
                         <a-image
@@ -216,16 +216,17 @@
                     <a-entity id="group-point7" scale="0 0 0"> </a-entity>
                 </a-entity>
             </a-entity>
-
-            <a-entity id="cam" camera position="0 0 0" look-controls>
-                <a-entity
-                    cursor="fuse:true;fuseTimeout:2000"
-                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
-                    position="0 0 -1.8"
-                    material="shader:flat;color:#ff0000"
-                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
-                    raycaster="objects:.raycastable; far: 100;"
-                >
+            <a-entity id="rig" position="0 0 0">
+                <a-entity id="cam" camera look-controls>
+                    <a-entity
+                        cursor="fuse:true;fuseTimeout:2000"
+                        geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
+                        position="0 0 -1.8"
+                        material="shader:flat;color:#ff0000"
+                        animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                        raycaster="objects:.raycastable; far: 100;"
+                    >
+                    </a-entity>
                 </a-entity>
             </a-entity>
         </a-scene>
@@ -233,5 +234,6 @@
         <script src="hotspot.js"></script>
         <script src="play-on-window-click.js"></script>
         <script src="video-controls.js"></script>
+        <script src="vr-controller.js"></script>
     </body>
 </html>

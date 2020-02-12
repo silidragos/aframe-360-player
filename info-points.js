@@ -20,3 +20,23 @@ AFRAME.registerComponent('show-hide-after-seconds', {
         }
     }
 });
+
+AFRAME.registerComponent('show-on-hover', {
+    schema: {},
+    init: function() {
+        this.el.object3D.children[0].el.setAttribute('visible', false);
+        this.el.addEventListener(
+            'mouseenter',
+            function() {
+                this.el.object3D.children[0].el.setAttribute('visible', true);
+            }.bind(this)
+        );
+
+        this.el.addEventListener(
+            'mouseleave',
+            function() {
+                this.el.object3D.children[0].el.setAttribute('visible', false);
+            }.bind(this)
+        );
+    }
+});

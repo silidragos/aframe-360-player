@@ -1,3 +1,6 @@
+.top-bar {
+    margin-left: 100px;
+}
 #start-video {
     position: absolute;
     margin: auto;
@@ -31,7 +34,7 @@
     height: 50px;
     font-size: 2em;
     color: white;
-    background-color: gray;
+    background-color: #129a8d;
 
     padding: 25px;
     text-decoration: none;
