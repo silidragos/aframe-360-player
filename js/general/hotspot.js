@@ -22,7 +22,7 @@ AFRAME.registerComponent('spot', {
         var data = this.data;
 
         this.el.addEventListener('click', function() {
-            document.getElementById('video-control').emit('pauseVideo');
+            document.getElementById('skybox').components.material.material.map.image.pause();
 
             var sky = document.getElementById('skybox');
             sky.setAttribute('src', data.linkto);
