@@ -1,3 +1,6 @@
+// let base_url = "./video/";
+let base_url = "https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/"
+
 AFRAME.registerComponent('video-360-play-pause', {
     schema: {
         playIcon: { default: '#play-icon' },

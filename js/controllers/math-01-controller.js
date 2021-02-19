@@ -77,8 +77,8 @@ class Math01Controller {
             paused:true
         }];
         this.videos = [
-            "./video/math/architecture_1_montage.mp4",
-            "./video/math/architecture_1_montage_2.mp4"
+            base_url + "math/architecture_1_montage.mp4",
+            base_url + "math/architecture_1_montage_2.mp4"
         ];
         this.currentVideo = 0;
         this.isVideoReset = true;
