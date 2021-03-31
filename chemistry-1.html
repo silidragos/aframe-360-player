@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Chimie</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+</head>
+
+<body>
+    <button id="start-video">
+        Start
+    </button>
+
+    <a-scene>
+        <a-assets>
+            <!-- <video id="video" crossorigin="anonymous" preload="auto" src="./video/math/architecture_2_montage.mp4"
+                playsinline webkit-playsinline></video> -->
+
+            <video id="video" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/chemistry/chimie_1.mp4" playsinline
+                webkit-playsinline></video>
+
+            <img id="play-icon" src="./img/play.png" />
+            <img id="pause-icon" src="./img/pause.png" />
+            <img id="next-icon" src="./img/next.png" />
+        </a-assets>
+
+        <a-videosphere id="skybox" rotation="0 130 0" src="#video"></a-videosphere>
+        <a-entity id="controls-wrapper">
+            <a-image id="video-control" class="raycastable control" video-360-play-pause position="-0.5 1.25 -2"
+                scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+            <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
+                onclick="chemistryController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+        </a-entity>
+
+        <a-entity id="rig" position="0 0 0">
+            <a-entity id="cam" camera look-controls>
+                <a-entity cursor="fuse:true;fuseTimeout:2000"
+                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8"
+                    material="shader:flat;color:#ff0000"
+                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                    raycaster="objects:.raycastable; far: 100;">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <!-- 1 -->
+        <a-entity class="geo-set" visible="false">
+            <!-- Yellow -->
+            <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                component-padding="0.1" opacity="0" width="2.5" height="2" position="-4.311 2.8 1.081"
+                rotation="0 100 0">
+                <a-gui-label width="2" height="0.5" value="Chemical chameleon - REDOX reactions" margin="0 0 0.05 0"
+                    font-color="#555409" line-height="1.5" background-color="#D4d00e">
+                </a-gui-label>
+            </a-gui-flex-container>
+
+            <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                component-padding="0.1" opacity="0" width="3" height="2" position="-4.311 -1.5 3.533"
+                rotation="0 115 0">
+                <a-gui-label width="3" align="left" height="1"
+                    value="Erlenmeyer glass, hydrogen peroxide, sugar, distilled water, potassium permanganate solution (violet) (KMnO4)."
+                    margin="0 0 0.05 0" font-color="#000000" line-height="1.5" font-size="0.15"
+                    background-color="#D4d00e">
+                </a-gui-label>
+            </a-gui-flex-container>
+
+            <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                component-padding="0.1" opacity="0" width="3" height="2" position="-5.404 -1.5 -0.661"
+                rotation="0 80 0">
+                <a-gui-label width="2.5" align="left" height="0.5" value="Mn7+ + 3e- -> Mn4+" margin="0 0 0.05 0"
+                    font-color="#000000" line-height="1.5" font-size="0.15" background-color="#D4d00e">
+                </a-gui-label>
+                <a-gui-label width="2.5" align="left" height="0.5" value="Mn4+ + 2 Mn7+ -> 3 Mn6+" margin="0 0 0.05 0"
+                    font-color="#000000" line-height="1.5" font-size="0.15" background-color="#D4d00e">
+                </a-gui-label>
+            </a-gui-flex-container>
+
+            <!-- Orange -->
+            <a-entity rotation="0 -60 0" position="-1.397 0 -2.651">
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="2.5" height="2" position="-4.311 3.8 1.081"
+                    rotation="0 100 0">
+                    <a-gui-label width="2" height="0.5" value="Elephant’s toothpaste" margin="0 0 0.05 0"
+                        font-color="#000000" line-height="1.5" background-color="#Ce6d04">
+                    </a-gui-label>
+                </a-gui-flex-container>
+
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3" height="2" position="-4.311 -2 3.533"
+                    rotation="0 115 0">
+                    <a-gui-label width="3" align="left" height="1"
+                        value="1L volumetric flask, foaming agent (liquid soap), 30% hydrogen peroxide (Perhydrol), and saturated potassium iodide (KI) solution."
+                        margin="0 0 0.05 0" font-color="#000000" line-height="1.5" font-size="0.15"
+                        background-color="#Ce6d04">
+                    </a-gui-label>
+                </a-gui-flex-container>
+
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3" height="2" position="-5.404 -2 -0.661"
+                    rotation="0 80 0">
+                    <a-gui-label width="2.5" align="left" height="0.5" value="2 H2O2 -> 2 H2O + O2" margin="0 0 0.05 0"
+                        font-color="#000000" line-height="1.5" font-size="0.15" background-color="#Ce6d04">
+                    </a-gui-label>
+                </a-gui-flex-container>
+            </a-entity>
+
+            <!-- Blue -->
+            <a-entity rotation="0 -170 0" position="-0.584 0 0.441">
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3.5" height="2" position="-4.311 1.5 1.081"
+                    rotation="0 100 0">
+                    <a-gui-label width="3.5" height="0.5"
+                        value="Combustion of carbohydrates in a highly oxidizing environment" margin="0 0 0.05 0"
+                        font-color="#000000" line-height="1.5" background-color="#08e1ff">
+                    </a-gui-label>
+                </a-gui-flex-container>
+
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3" height="2" position="-4.311 -2 3.533"
+                    rotation="0 115 0">
+                    <a-gui-label width="3" align="left" height="1"
+                        value="Tripod and crucible, potassium chlorate (KClO3), concentrated sulphuric acid, glucose (C6H12O6) or sucrose."
+                        margin="0 0 0.05 0" font-color="#000000" line-height="1.5" font-size="0.15"
+                        background-color="#08e1ff">
+                    </a-gui-label>
+                </a-gui-flex-container>
+
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3" height="2" position="-5.404 -2 -0.661"
+                    rotation="0 80 0">
+                    <a-gui-label width="2.5" align="left" height="0.5"
+                        value="2 KClO3 → 2 KCl + 3 O2 (potassium chlorate chemical decomposition)" margin="0 0 0.05 0"
+                        font-color="#000000" line-height="1.5" font-size="0.15" background-color="#08e1ff">
+                    </a-gui-label>
+                    <a-gui-label width="2.5" align="left" height="0.5"
+                        value="C6H12O6 + 6 O2 → 6 CO2 + 6 H2O (glucose oxidation)" margin="0 0 0.05 0"
+                        font-color="#000000" line-height="1.5" font-size="0.15" background-color="#08e1ff">
+                    </a-gui-label>
+                </a-gui-flex-container>
+            </a-entity>
+        </a-entity>
+    </a-scene>
+
+    <script src="./js/general/hotspot.js"></script>
+    <script src="./js/general/play-on-window-click.js"></script>
+    <script src="./js/general/video-controls.js"></script>
+    <script src="./js/general/vr-controller.js"></script>
+    <script src="./js/controllers/steps-controller.js"></script>
+    <script src="./js/controllers/chemistry-controller.js"></script>
+
+</body>
+
+</html>

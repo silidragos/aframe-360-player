@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Chimie</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+</head>
+
+<body>
+    <button id="start-video">
+        Start
+    </button>
+
+    <a-scene>
+        <a-assets>
+            <!-- <video id="video" crossorigin="anonymous" preload="auto" src="./video/math/architecture_2_montage.mp4"
+                playsinline webkit-playsinline></video> -->
+
+            <video id="video" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/chemistry/chimie_4.mp4" playsinline
+                webkit-playsinline></video>
+
+            <img id="play-icon" src="./img/play.png" />
+            <img id="pause-icon" src="./img/pause.png" />
+            <img id="next-icon" src="./img/next.png" />
+        </a-assets>
+
+        <a-videosphere id="skybox" rotation="0 130 0" src="#video"></a-videosphere>
+        <a-entity id="controls-wrapper">
+            <a-image id="video-control" class="raycastable control" video-360-play-pause position="-0.5 1.25 -2"
+                scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+            <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
+                onclick="chemistryController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+        </a-entity>
+
+        <a-entity id="rig" position="0 0 0">
+            <a-entity id="cam" camera look-controls>
+                <a-entity cursor="fuse:true;fuseTimeout:2000"
+                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8"
+                    material="shader:flat;color:#ff0000"
+                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                    raycaster="objects:.raycastable; far: 100;">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+
+        <!-- 4 -->
+        <a-entity class="geo-set" visible="false">
+            <!-- Yellow -->
+            <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                component-padding="0.1" opacity="0" width="2.5" height="2" position="-4.311 3.271 -2.339"
+                rotation="0 67.5 0">
+                <a-gui-label width="2" height="0.5" value="Phenolphthalein - pH indicator" margin="0 0 0.05 0"
+                    font-color="#555409" line-height="1.5" background-color="#D4d00e">
+                </a-gui-label>
+            </a-gui-flex-container>
+
+            <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                component-padding="0.1" opacity="0" width="3" height="2" position="-5.994 -1.5 -1.565"
+                rotation="0 61 0">
+                <a-gui-label width="3" align="left" height="1"
+                    value="Two Erlenmeyer glasses, sodium hydroxide solution (pH>7, alkaline), HCl solution (pH&#60;7, acid)."
+                    margin="0 0 0.05 0" font-color="#000000" line-height="1.5" font-size="0.15"
+                    background-color="#D4d00e">
+                </a-gui-label>
+            </a-gui-flex-container>
+            <a-image src="./img/chimie/equation.png" position="-5.914 -2.722 -1.474" rotation="0 61 0" width="2.6"
+                height="1.35">
+
+            </a-image>
+
+            <!-- Orange -->
+            <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                component-padding="0.1" opacity="0" width="2.5" height="2" position="-1.198 3.271 -3.57"
+                rotation="0 105 0">
+                <a-gui-label width="2" height="0.5" value="Lava Lamp" margin="0 0 0.05 0" font-color="#555409"
+                    line-height="1.5" background-color="#D4d00e">
+                </a-gui-label>
+            </a-gui-flex-container>
+
+            <a-entity rotation="0 -60 0" position="-1.198 0 -3.57">
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3" height="2" position="-2.728 -2 2.18"
+                    rotation="0 105 0">
+                    <a-gui-label width="3" align="left" height="1"
+                        value="Berzelius glass, 150 mL water, 150 mL oil, effervescent tablets, light source (phone torch)"
+                        margin="0 0 0.05 0" font-color="#000000" line-height="1.5" font-size="0.15"
+                        background-color="#Ce6d04">
+                    </a-gui-label>
+                    <a-gui-label width="2.5" align="left" height="0.5"
+                        value="The experiment is based on laws of physics, not chemistry" margin="0 0 0.05 0"
+                        font-color="#000000" line-height="1.5" font-size="0.15" background-color="#Ce6d04">
+                    </a-gui-label>
+                </a-gui-flex-container>
+            </a-entity>
+
+            <!-- Blue -->
+            <a-entity rotation="0 -170 0" position="-0.584 0 0.441">
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3.5" height="2" position="-4.311 1.5 1.081"
+                    rotation="0 100 0">
+                    <a-gui-label width="3.5" height="1.2" value="Chemical volcano - glycerin burning"
+                        margin="0 0 0.05 0" font-color="#000000" line-height="1.5" background-color="#08e1ff">
+                    </a-gui-label>
+                </a-gui-flex-container>
+
+                <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal"
+                    component-padding="0.1" opacity="0" width="3" height="5" position="-4.311 -2 1.081"
+                    rotation="0 100 0">
+                    <a-gui-label width="3" align="left" height="1"
+                        value="Tripod and crucible, potassium permanganate (KMnO4), glycerin (C3H8O3)."
+                        margin="0 0 0.05 0" font-color="#000000" line-height="1.5" font-size="0.15"
+                        background-color="#08e1ff">
+                    </a-gui-label>
+                    <a-gui-label width="2.5" align="left" height="1"
+                        value="C3H8O3 + 2 KMnO4 + 2 O2 -> 3 CO2 + 4 H2O + K2O + 2MnO2" margin="0 0 0.05 0"
+                        font-color="#000000" line-height="1.5" font-size="0.15" background-color="#08e1ff">
+                    </a-gui-label>
+                </a-gui-flex-container>
+            </a-entity>
+        </a-entity>
+
+    </a-scene>
+
+    <script src="./js/general/hotspot.js"></script>
+    <script src="./js/general/play-on-window-click.js"></script>
+    <script src="./js/general/video-controls.js"></script>
+    <script src="./js/general/vr-controller.js"></script>
+    <script src="./js/controllers/steps-controller.js"></script>
+    <script src="./js/controllers/chemistry-controller.js"></script>
+
+</body>
+
+</html>
