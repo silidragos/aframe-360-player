@@ -23,13 +23,15 @@
         <a-assets>
             <!-- <video id="video" crossorigin="anonymous" preload="auto" src="./video/math/architecture_2_montage.mp4"
                 playsinline webkit-playsinline></video> -->
-                
-            <video id="video" crossorigin="anonymous" preload="auto" src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/math/architecture_2_montage.mp4"
-            playsinline webkit-playsinline></video>
+
+            <video id="video" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/math/architecture_2_montage.mp4"
+                playsinline webkit-playsinline></video>
 
             <img id="play-icon" src="./img/play.png" />
             <img id="pause-icon" src="./img/pause.png" />
             <img id="next-icon" src="./img/next.png" />
+            <img id="info-icon" src="./img/info.png" />
         </a-assets>
 
         <a-videosphere id="skybox" rotation="0 130 0" src="#video"></a-videosphere>
@@ -37,8 +39,8 @@
             <a-image id="video-control" class="raycastable control" video-360-play-pause position="-0.5 1.25 -2"
                 scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
-            <a-image src="#next-icon" class="raycastable control"  position="1 1.25 -2" onclick="mathController.OnNextStep()"
-                scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
+                onclick="mathController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
         </a-entity>
 
@@ -54,6 +56,11 @@
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-5.5 -3 -5" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/angles.jpg"></a-image>
+            </a-image>
+
             <a-box scale="5 500 5" position="-166.71 231 -173.80" rotation="-5.5 -45 0" material="color:black;">
             </a-box>
             <a-entity text="value: 1; color: black; align: center;" position="-125 350 -198" scale="500 500 500">
@@ -70,6 +77,10 @@
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-4.5 -3 -5" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/pitagora.jpg"></a-image>
+            </a-image>
             <a-box id="box" scale="1 1500 1" position="4 -15 19" rotation="90 90 0" material="color:black;">
             </a-box>
             <a-box id="box" scale="5 100 5" position="491.9 33.5 19.495" rotation="0 0 0" material="color:black;">
@@ -83,6 +94,10 @@
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-5.5 -3 -5" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/position-point-line-1.jpg"></a-image>
+            </a-image>
             <a-box scale="5 500 5" position="-125.6 173 63" rotation="-3 -28 0" material="color:black;">
             </a-box>
             <a-entity text="value: 2; color: black; align: center;" position="-125.6 173 79" scale="500 500 500"
@@ -113,6 +128,10 @@
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-5.5 -3 -5" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/circle-formulas.png"></a-image>
+            </a-image>
             <a-box scale="5 500 5" position="254.5 -282.7 16.43" rotation="90 45.198 0" material="color:black;">
             </a-box>
             <a-box scale="5 500 5" position="115.21 -216 121.6" rotation="90 12.947 0" material="color:#333333;">
@@ -125,8 +144,12 @@
             <a-entity text="value: 3 ; color: black; align: center;" position="44.4 -118.8 -85.979" scale="250 250 250"
                 rotation="0 -30 0"></a-entity>
         </a-entity>
-        
+
         <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-5.5 -3 -5" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/angles.jpg"></a-image>
+            </a-image>
             <a-entity position="-131.37 -52.737 73.880" rotation="-5 50 0">
                 <a-box scale="5 500 5" position="5.7 250 3.645" rotation="0 0 0" material="color:black;">
                 </a-box>
@@ -165,6 +188,10 @@
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-5.5 -3 -5" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/parralel-lines-transversal.png"></a-image>
+            </a-image>
             <a-entity position="-139.67 -52.737 85.856" rotation="-1.7 50 -2.7">
                 <a-box scale="5 500 5" position="5.7 250 3.645" rotation="0 0 0" material="color:black;">
                 </a-box>
@@ -187,88 +214,82 @@
             <a-entity text="value: 3; color: black; align: center;" position="-130 118 -22.5" scale="250 250 250"
                 rotation="0 110 0"></a-entity>
         </a-entity>
-        <a-entity class="geo-set" visible="false" scale="0.03 0.03 0.03">
-            <a-entity position="422 -286 187" rotation="0 50 -5" scale="1 5 1">
-                <a-box scale="5 500 5" position="5.7 250 3.645" rotation="0 0 0" material="color:black;">
-                </a-box>
-            </a-entity>
-            <a-box scale="5 500 5" position="254.5 -282.7 16.43" rotation="90 45.198 0" material="color:black;">
-            </a-box>
 
-            <a-entity text="value: 1; color: black; align: center;" position="175 -64.4 117.35" scale="500 500 500"
-                rotation="0 -123.5 0"></a-entity>
-            <a-entity text="value: 2; color: black; align: center;" position="150 101 8" scale="500 500 500"
-                rotation="0 -123.5 0"></a-entity>
-            <a-entity text="value: 3; color: black; align: center;" position="76.321 -64.4 -86.616" scale="500 500 500"
-                rotation="0 -52.584 0"></a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-50 -3 -25" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/cylinder-formulas.png"></a-image>
+            </a-image>
+            <a-entity scale="0.03 0.03 0.03">
+                <a-entity position="422 -286 187" rotation="0 50 -5" scale="1 5 1">
+                    <a-box scale="5 500 5" position="5.7 250 3.645" rotation="0 0 0" material="color:black;">
+                    </a-box>
+                </a-entity>
+                <a-box scale="5 500 5" position="254.5 -282.7 16.43" rotation="90 45.198 0" material="color:black;">
+                </a-box>
+
+                <a-entity text="value: 1; color: black; align: center;" position="175 -64.4 117.35" scale="500 500 500"
+                    rotation="0 -123.5 0"></a-entity>
+                <a-entity text="value: 2; color: black; align: center;" position="150 101 8" scale="500 500 500"
+                    rotation="0 -123.5 0"></a-entity>
+                <a-entity text="value: 3; color: black; align: center;" position="76.321 -64.4 -86.616"
+                    scale="500 500 500" rotation="0 -52.584 0"></a-entity>
+            </a-entity>
         </a-entity>
-        
 
-        <a-entity class="geo-set" visible="false" scale="0.03 0.03 0.03">
-            <a-entity scale="1 1 1" position="21.642 -170 -50.78" rotation="0 45.198 0">
-                <a-box scale="5 400 5" position="0 0 200" rotation="90 0 0" material="color:black;">
-                </a-box>
-            </a-entity>
-            <a-entity scale="1 1 1" position="21.642 -170 -50.78" rotation="0 120 0">
-                <a-box scale="5 400 5" position="0 0 200" rotation="90 0 0" material="color:black;">
-                </a-box>
-            </a-entity>
-            
-            <a-entity scale="1 1 1" position="287 -170 178" rotation="0 165 0">
-                <a-box scale="5 500 5" position="0 0 200" rotation="90 7.824 0" material="color:black;">
-                </a-box>
-            </a-entity>
 
-            <a-entity text="value: 1; color: black; align: center;" position="176 -64.4 -156.89" scale="500 500 500"
-                rotation="0 -52.584 0"></a-entity>
-            <a-entity text="value: 2; color: black; align: center;" position="154 -64.4 137" scale="500 500 500"
-                rotation="0 -123.5 0"></a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-50 -3 -25" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/parralel-lines-transversal.png"></a-image>
+            </a-image>
+
+            <a-entity scale="0.03 0.03 0.03">
+                <a-entity scale="1 1 1" position="21.642 -170 -50.78" rotation="0 45.198 0">
+                    <a-box scale="5 400 5" position="0 0 200" rotation="90 0 0" material="color:black;">
+                    </a-box>
+                </a-entity>
+                <a-entity scale="1 1 1" position="21.642 -170 -50.78" rotation="0 120 0">
+                    <a-box scale="5 400 5" position="0 0 200" rotation="90 0 0" material="color:black;">
+                    </a-box>
+                </a-entity>
+
+                <a-entity scale="1 1 1" position="287 -170 178" rotation="0 165 0">
+                    <a-box scale="5 500 5" position="0 0 200" rotation="90 7.824 0" material="color:black;">
+                    </a-box>
+                </a-entity>
+
+                <a-entity text="value: 1; color: black; align: center;" position="176 -64.4 -156.89" scale="500 500 500"
+                    rotation="0 -52.584 0"></a-entity>
+                <a-entity text="value: 2; color: black; align: center;" position="154 -64.4 137" scale="500 500 500"
+                    rotation="0 -123.5 0"></a-entity>
                 <a-entity text="value: 3; color: black; align: center;" position="58.469 -64.4 -20" scale="500 500 500"
                     rotation="-47 -104 0"></a-entity>
+            </a-entity>
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
+            <a-image class="control to-raycast" position="-50 -3 -25" scale="1 1 1" src="#info-icon" look-at="#cam"
+                show-child-on-click>
+                <a-image position="-5 0 0" scale="8 10 1" src="./img/math/geometry-formulas.png"></a-image>
+            </a-image>
             <a-box scale="5 100 5" position="55.6 -206 347" rotation="-9 5.794 41.035" material="color:black;">
             </a-box>
             <a-box scale="5 100 5" position="0.648 -203 246.48" rotation="-9 5.794 41.035" material="color:black;">
             </a-box>
-            <a-box scale="5 150 5" position="-5.634 -178.25 312.54" rotation="47.88 123.2 104.8" material="color:black;">
+            <a-box scale="5 150 5" position="-5.634 -178.25 312.54" rotation="47.88 123.2 104.8"
+                material="color:black;">
             </a-box>
             <a-box scale="5 175 5" position="71.8 -261 330" rotation="46.75 128.67 108.84" material="color:black;">
             </a-box>
 
             <a-entity text="value:2; color: black; align: center;" position="25.158 -241 371.68" scale="500 500 500"
                 rotation="6 179.75 0"></a-entity>
-            
+
             <a-box scale="5 75 5" position="-336 -65.43 180.48" rotation="-10.605 8.481 81.366" material="color:black;">
             </a-box>
-            <a-box scale="5 75 5" position="-374.5 -65.43 88.25" rotation="-10.605 22.972 81.366" material="color:black;">
-            </a-box>
-            <a-box scale="5 100 5" position="-290 -65.43 111.25" rotation="-11.605 -67 89.5" material="color:black;">
-            </a-box>
-            <a-box scale="5 100 5" position="-425.5 -65.39 157.6" rotation="-11.605 -67 89.5" material="color:black;">
-            </a-box>
-
-            <a-entity text="value: 1; color: black; align: center;" position="-394 -34.332 146.5" scale="750 750 750"
-                rotation="0 113 0"></a-entity>
-        </a-entity>
-
-        <a-entity class="geo-set" visible="false">
-            <a-box scale="5 100 5" position="55.6 -206 347" rotation="-9 5.794 41.035" material="color:black;">
-            </a-box>
-            <a-box scale="5 100 5" position="0.648 -203 246.48" rotation="-9 5.794 41.035" material="color:black;">
-            </a-box>
-            <a-box scale="5 150 5" position="-5.634 -178.25 312.54" rotation="47.88 123.2 104.8" material="color:black;">
-            </a-box>
-            <a-box scale="5 175 5" position="71.8 -261 330" rotation="46.75 128.67 108.84" material="color:black;">
-            </a-box>
-
-            <a-entity text="value:2; color: black; align: center;" position="25.158 -241 371.68" scale="500 500 500"
-                rotation="6 179.75 0"></a-entity>
-            
-            <a-box scale="5 75 5" position="-336 -65.43 180.48" rotation="-10.605 8.481 81.366" material="color:black;">
-            </a-box>
-            <a-box scale="5 75 5" position="-374.5 -65.43 88.25" rotation="-10.605 22.972 81.366" material="color:black;">
+            <a-box scale="5 75 5" position="-374.5 -65.43 88.25" rotation="-10.605 22.972 81.366"
+                material="color:black;">
             </a-box>
             <a-box scale="5 100 5" position="-290 -65.43 111.25" rotation="-11.605 -67 89.5" material="color:black;">
             </a-box>
@@ -280,6 +301,7 @@
         </a-entity>
     </a-scene>
 
+    <script src="./js/general/info-points.js"></script>
     <script src="./js/general/hotspot.js"></script>
     <script src="./js/general/play-on-window-click.js"></script>
     <script src="./js/general/video-controls.js"></script>

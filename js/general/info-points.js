@@ -40,3 +40,19 @@ AFRAME.registerComponent('show-on-hover', {
         );
     }
 });
+
+
+AFRAME.registerComponent('show-child-on-click', {
+    init: function () {
+        const children = this.el.object3D.children;
+        const child = children[0].el; 
+        child.setAttribute('visible', false);
+        this.el.addEventListener(
+            'click',
+            () => {
+                console.log("el",child);
+                child.setAttribute('visible', !child.getAttribute('visible'));
+            }
+        );
+    }
+});
