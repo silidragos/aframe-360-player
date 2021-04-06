@@ -8,7 +8,7 @@ class IndexController {
             topic: "Organisms and their environment",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "2",
             title: "Architecture in mathematics",
@@ -16,7 +16,7 @@ class IndexController {
             topic: "buildings, pieces of architecture, pyramid, prism, square, rectangle, cone, roll, etc.",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "3",
             title: "Astronomy",
@@ -24,7 +24,7 @@ class IndexController {
             topic: "",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "4",
             title: "Bridges",
@@ -32,7 +32,7 @@ class IndexController {
             topic: "Bridges, construction of bridges",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "5",
             title: "Caves",
@@ -40,7 +40,7 @@ class IndexController {
             topic: "Caves",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "6",
             title: "Chemistry Experiments",
@@ -48,7 +48,7 @@ class IndexController {
             topic: "Redox reactions;Elephant’s toothpaste;Combustion of carbohydrates;",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/chemistry-1.html"
+            link: "./chemistry-1.html"
         }, {
             id: "7",
             title: "Chemistry Experiments",
@@ -56,7 +56,7 @@ class IndexController {
             topic: "Coloured flames; Green Chemical Volcano;",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/chemistry-2.html"
+            link: "./chemistry-2.html"
         }, {
             id: "8",
             title: "Chemistry Experiments",
@@ -64,7 +64,7 @@ class IndexController {
             topic: "Coloured flames; 'Fireflies' - energetic oxidation of alcohols",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/chemistry-3.html"
+            link: "./chemistry-3.html"
         }, {
             id: "9",
             title: "Chemistry Experiments",
@@ -72,15 +72,23 @@ class IndexController {
             topic: "pH indicator; 'Lava lamp'; Chemical volcano - glycerine burning",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/chemistry-4.html"
+            link: "./chemistry-4.html"
         }, {
-            id: "10/11",
+            id: "10",
             title: "Chemistry Experiments",
+            rowspan: 2,
             discipline: "Chemistry",
             topic: "Isobar process; Violent oxidation; Aluminium chlorination; Stoichiometry",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/chemistry-5.html"
+            link: "./chemistry-5.html"
+        }, {
+            id: "11",
+            discipline: "Chemistry",
+            topic: "Isobar process; Violent oxidation; Aluminium chlorination; Stoichiometry",
+            ageGroup: "??",
+            lessonPlan: "TBD",
+            link: "./chemistry-5.html"
         }, {
             id: "12",
             title: "Electron Microscope",
@@ -88,7 +96,7 @@ class IndexController {
             topic: "The device; Operating an electronic microscope",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "13",
             title: "Electron Microscope",
@@ -96,7 +104,7 @@ class IndexController {
             topic: "Atoms, elements and compounds",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "14",
             title: "Electron Microscope",
@@ -104,7 +112,7 @@ class IndexController {
             topic: "The periodic table – Fe ????",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "15",
             title: "Electron Microscope",
@@ -112,7 +120,7 @@ class IndexController {
             topic: "Metal alloys",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "16",
             title: "Ferrari - Sports car engines",
@@ -120,7 +128,7 @@ class IndexController {
             topic: "Work, energy and power",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "17",
             title: "Friction drag - Car & Airplane Simulation",
@@ -128,7 +136,7 @@ class IndexController {
             topic: "Friction drag; Aerodynamic",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "18",
             title: "Lake Types",
@@ -136,7 +144,7 @@ class IndexController {
             topic: " Natural dam lake, a volcanic lake, artificial/human made dam lake, glacial lake",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "19",
             title: "Laser",
@@ -144,7 +152,7 @@ class IndexController {
             topic: "The Process",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
             id: "20",
             title: "Laser",
@@ -152,15 +160,23 @@ class IndexController {
             topic: "What is a Laser? How lasers work? How is it used?",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }, {
-            id: "21/22",
+            id: "21",
             title: "Leaning Tower of Pisa",
+            rowspan:2,
             discipline: "Math",
             topic: "Collinear points, circle, adjacent angles, parallelism, geometric forms, plane and space geometry",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/math.html"
+            link: "./math.html"
+        }, {
+            id: "22",
+            discipline: "Math",
+            topic: "Collinear points, circle, adjacent angles, parallelism, geometric forms, plane and space geometry",
+            ageGroup: "??",
+            lessonPlan: "TBD",
+            link: "./math.html"
         }, {
             id: "23",
             title: "Leonardo da Vinci machines Working models",
@@ -169,7 +185,7 @@ class IndexController {
             ageGroup: "??",
             lessonPlan: "TBD",
             link: ""
-        },{
+        }, {
             id: "24",
             title: "Leonardo da Vinci machines Working models",
             discipline: "Mechanics",
@@ -177,7 +193,7 @@ class IndexController {
             ageGroup: "??",
             lessonPlan: "TBD",
             link: ""
-        },{
+        }, {
             id: "25",
             title: "Leonardo da Vinci machines Working models",
             discipline: "History",
@@ -185,7 +201,7 @@ class IndexController {
             ageGroup: "??",
             lessonPlan: "TBD",
             link: ""
-        },{
+        }, {
             id: "26",
             title: "Measuring Tools",
             discipline: "Physics",
@@ -193,23 +209,23 @@ class IndexController {
             ageGroup: "??",
             lessonPlan: "TBD",
             link: ""
-        },{
+        }, {
             id: "27",
             title: "Movement and coordination at the gym",
+            rowspan: 2,
             discipline: "Biology",
             topic: "Types of movement and coordination actions",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/biology.html"
-        },{
+            link: "./biology.html"
+        }, {
             id: "28",
-            title: "Movement and coordination at the gym",
             discipline: "Biology",
             topic: "Muscles, Bones and Central Nervous System",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/biology.html"
-        },{
+            link: "./biology.html"
+        }, {
             id: "30",
             title: "Optical Microscope",
             discipline: "Physics",
@@ -217,94 +233,94 @@ class IndexController {
             ageGroup: "??",
             lessonPlan: "TBD",
             link: ""
-        },{
+        }, {
             id: "31",
             title: "Plasma Injection",
             discipline: "Physics",
             topic: "Plasma, Aggregation State",
             ageGroup: "??",
             lessonPlan: "Plasma. The 4th aggregation state of matter.",
-            link: "/plasma.html"
-        },{
+            link: "./plasma.html"
+        }, {
             id: "32",
             title: "Phyiscs on the ski slope",
             discipline: "Physics",
             topic: "Forces Action",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
-        },{
+            link: "./"
+        }, {
             id: "33",
             title: "Robotics",
             discipline: "Technology/Physics",
             topic: "Subasamble, stimuli, impuls electric",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
-        },{
+            link: "./"
+        }, {
             id: "34",
             title: "Shapes of settlements",
             discipline: "Geography",
             topic: "Human settlements and their impact on environment",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
-        },{
+            link: "./"
+        }, {
             id: "35",
             title: "The carillon mechanical clock",
             discipline: "Physics",
             topic: "",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
-        },{
+            link: "./"
+        }, {
             id: "36",
             title: "The movements of a skier on an inclined plane",
             discipline: "Physics",
             topic: "Inclined plane, movement, distance and coordinates",
             ageGroup: "??",
             lessonPlan: "Movement on an inclined plane",
-            link: "/math.html"
-        },{
+            link: "./schi.html"
+        }, {
             id: "37",
             title: "Turbine - fluid mechanics",
             discipline: "Physics/Mechanics",
             topic: "",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
-        },{
+            link: "./"
+        }, {
             id: "38",
             title: "Turbine - fluid mechanics",
             discipline: "Physics/Mechanics",
             topic: "",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
-        },{
+            link: "./"
+        }, {
             id: "39",
             title: "Volcanic Rocks",
             discipline: "Geography",
             topic: "Volcanic Rocks",
             ageGroup: "15-16 years old",
             lessonPlan: "Volcanic Rocks",
-            link: "/roci-vulcanice.html"
-        },{
+            link: "./roci-vulcanice.html"
+        }, {
             id: "40",
             title: "Zoology - The Anatomy Museum",
             discipline: "Biology/Zoology",
             topic: "??",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "/"
+            link: "./"
         }]
     }
 
-    setMaterials(filter){
+    setMaterials(filter) {
         let table = document.querySelector("#main-table tbody");
         table.innerHTML = "";
-        for(let row of this.classes){
-            if(filter !== "all" && !row.discipline.toLowerCase().includes(filter)){
+        for (let row of this.classes) {
+            if (filter !== "all" && !row.discipline.toLowerCase().includes(filter)) {
                 continue;
             }
             let rowEl = document.createElement("tr");
@@ -312,29 +328,40 @@ class IndexController {
             cell.innerText = row.id;
             rowEl.appendChild(cell);
 
-            cell = document.createElement("td");
-            if(row.link !== "" && row.link !== "/"){
-                let link = document.createElement("a");
-                link.setAttribute("href", row.link);
-                link.innerText = row.title;
-                cell.appendChild(link);
-            }else{
-                cell.innerText = row.title;
+            if (row.title) {
+                cell = document.createElement("td");
+                if (row.rowspan) {
+                    cell.setAttribute("rowspan", row.rowspan);
+                }
+
+                let titleParent = cell;
+                if (row.link !== "" && row.link !== "./") {
+                    let link = document.createElement("a");
+                    link.setAttribute("href", row.link);
+                    titleParent = link;
+                    cell.appendChild(titleParent);
+                }
+                titleParent.innerText = row.title;
+                rowEl.appendChild(cell);
             }
-            rowEl.appendChild(cell);
-            
-            cell = document.createElement("td");
-            cell.innerText = row.discipline;
-            rowEl.appendChild(cell);
-            
+
+            if (row.title) {
+                cell = document.createElement("td");
+                cell.innerText = row.discipline;
+                if (row.rowspan) {
+                    cell.setAttribute("rowspan", row.rowspan);
+                }
+                rowEl.appendChild(cell);
+            }
+
             cell = document.createElement("td");
             cell.innerText = row.topic;
             rowEl.appendChild(cell);
-            
+
             cell = document.createElement("td");
             cell.innerText = row.ageGroup;
             rowEl.appendChild(cell);
-            
+
             cell = document.createElement("td");
             cell.innerText = row.lessonPlan;
             rowEl.appendChild(cell);
@@ -343,7 +370,7 @@ class IndexController {
         }
     }
 
-    onFilterChanged(){
+    onFilterChanged() {
         let filter = document.getElementById("discipline").value;
         console.log("select changed", filter);
         this.setMaterials(filter);

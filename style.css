@@ -83,10 +83,6 @@ table tbody{
     text-align: center;
 }
 
-table tbody tr:hover{
-    background-color: rgb(109, 221, 184);
-}
-
 footer{
     width: 80%;
     margin:auto;
