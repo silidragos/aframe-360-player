@@ -1,6 +1,7 @@
 AFRAME.registerComponent('hotspots', {
     init: function() {
         this.el.addEventListener('reloadspots', function(evt) {
+            console.log("evt", evt.detail);
             var currSpotGroup = document.getElementById(evt.detail.currspots);
             currSpotGroup.setAttribute('scale', '0 0 0');
             var newSpotGroup = document.getElementById(evt.detail.newspots);

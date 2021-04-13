@@ -1,240 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <title>Biology</title>
 
-        <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Biology</title>
 
-        <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
-        <!-- <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"> </!-->
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    </head>
+    <link rel="stylesheet" href="style.css" />
 
-    <body>
-        <button id="start-video">
-            Start
-        </button>
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
+    <!-- <script src="https://unpkg.com/aframe-animation-component@^4.1.2/dist/aframe-animation-component.min.js"> </!-->
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+</head>
 
-        <a-scene>
-            <a-assets>
-                <video
-                    id="h_front"
-                    crossorigin="anonymous"
-                    preload="auto"
-                    src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/haltere_front.mp4"
-                    playsinline
-                    webkit-playsinline
-                    loop
-                ></video>
+<body>
+    <button id="start-video">
+        Start
+    </button>
 
-                <video
-                    id="h_side"
-                    crossorigin="anonymous"
-                    preload="auto"
-                    src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/haltere_side.mp4"
-                    playsinline
-                    webkit-playsinline
-                    loop
-                ></video>
+    <a-scene>
+        <a-assets>
+            <video id="h_front" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/haltere_front.mp4" playsinline
+                webkit-playsinline loop></video>
 
-                <video
-                    id="h_back"
-                    crossorigin="anonymous"
-                    preload="auto"
-                    src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/haltere_back.mp4"
-                    playsinline
-                    webkit-playsinline
-                    loop
-                ></video>
+            <video id="h_side" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/haltere_side.mp4" playsinline
+                webkit-playsinline loop></video>
 
-                <video
-                    id="g_side"
-                    crossorigin="anonymous"
-                    preload="auto"
-                    src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/Gantere_side.mp4"
-                    playsinline
-                    webkit-playsinline
-                    loop
-                ></video>
+            <video id="h_back" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/haltere_back.mp4" playsinline
+                webkit-playsinline loop></video>
 
-                <video
-                    id="run_front"
-                    crossorigin="anonymous"
-                    preload="auto"
-                    src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/run_front.mp4"
-                    playsinline
-                    webkit-playsinline
-                    loop
-                ></video>
+            <video id="g_side" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/Gantere_side.mp4" playsinline
+                webkit-playsinline loop></video>
 
-                <video
-                    id="run_side"
-                    crossorigin="anonymous"
-                    preload="auto"
-                    src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/run_side.mp4"
-                    playsinline
-                    webkit-playsinline
-                    loop
-                ></video>
+            <video id="run_front" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/run_front.mp4" playsinline
+                webkit-playsinline loop></video>
 
-                <video
-                    id="swimming"
-                    crossorigin="anonymous"
-                    preload="auto"
-                    src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/swim_comp.mp4"
-                    playsinline
-                    webkit-playsinline
-                    loop
-                ></video>
+            <video id="run_side" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/run_side.mp4" playsinline
+                webkit-playsinline loop></video>
 
-                <img id="hotspot-left" src="./img/turn-left.png" />
-                <img id="hotspot-right" src="./img/turn-right.png" />
-                <img id="play-icon" src="./img/play.png" />
-                <img id="pause-icon" src="./img/pause.png" />
-                <img id="next-icon" src="./img/next.png" />
-            </a-assets>
+            <video id="swimming" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/anatomy/swim_comp.mp4" playsinline
+                webkit-playsinline loop></video>
 
-            <a-videosphere id="skybox" rotation="0 270 0" src="#h_front"> </a-videosphere>
+            <img id="hotspot-left" src="./img/turn-left.png" />
+            <img id="hotspot-right" src="./img/turn-right.png" />
+            <img id="play-icon" src="./img/play.png" />
+            <img id="pause-icon" src="./img/pause.png" />
+            <img id="next-icon" src="./img/next.png" />
+        </a-assets>
 
-            <a-entity id="controls-wrapper" rotation="0 90 0">
-                <a-image
-                    id="video-control"
-                    class="raycastable control"
-                    video-360-play-pause
-                    position="-1 1 -2"
-                    scale="0.4 0.4 0.4"
-                    src="#hotspot-left"
-                    look-at="#cam"
-                >
-                </a-image>
+        <a-videosphere id="skybox" rotation="0 270 0"> </a-videosphere>
 
-                <a-entity id="spots" hotspots>
-                    <!-- Haltere -->
-                    <a-entity id="group-point1">
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#g_side;spotgroup:group-point4;imageLink:#next-icon;"
-                            position="-0.25 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#h_side;spotgroup:group-point2;imageLink:#hotspot-right;"
-                            position="0.5 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                    </a-entity>
-                    <a-entity id="group-point2" scale="0 0 0">
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#g_side;spotgroup:group-point4;imageLink:#next-icon;"
-                            position="-0.25 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#h_front;spotgroup:group-point1;imageLink:#hotspot-left;"
-                            position="0.5 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#h_back;spotgroup:group-point3;imageLink:#hotspot-right"
-                            position="1.5 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                    </a-entity>
-                    <a-entity id="group-point3" scale="0 0 0">
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#g_side;spotgroup:group-point4;imageLink:#next-icon;"
-                            position="-0.25 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#h_front;spotgroup:group-point2;imageLink:#hotspot-left;"
-                            position="0.5 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                    </a-entity>
-                    <!-- Gantere -->
-                    <a-entity id="group-point4" scale="0 0 0">
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#run_front;spotgroup:group-point5;imageLink:#next-icon;"
-                            position="-0.25 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                    </a-entity>
-                    <!-- Running -->
-                    <a-entity id="group-point5" scale="0 0 0">
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#swimming;spotgroup:group-point7;imageLink:#next-icon;"
-                            position="-0.25 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#run_side;spotgroup:group-point6;imageLink:#hotspot-right"
-                            position="0.5 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                    </a-entity>
-                    <a-entity id="group-point6" scale="0 0 0">
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#swimming;spotgroup:group-point7;imageLink:#next-icon;"
-                            position="-0.25 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                        <a-image
-                            class="raycastable hotspot"
-                            spot="linkto:#run_front;spotgroup:group-point5;imageLink:#hotspot-left"
-                            position="0.5 1 -2"
-                            scale="0.4 0.4 0.4"
-                        >
-                        </a-image>
-                    </a-entity>
-                    <!-- Swimming -->
-                    <a-entity id="group-point7" scale="0 0 0"> </a-entity>
+        <a-entity id="controls-wrapper" rotation="0 90 0" look-at="#cam">
+            <a-image id="video-control" class="raycastable control" video-360-play-pause position="-1 1 -2"
+                scale="0.4 0.4 0.4" src="#play-icon" >
+            </a-image>
+            <a-image id="next-video" class="raycastable hotspot"
+                position="-0.25 1 -2" scale="0.4 0.4 0.4" src="#next-icon">
+            </a-image>
+            <a-image id="go-around-left" class="raycastable hotspot"
+                position="0.5 1 -2" scale="0.4 0.4 0.4" src="#hotspot-left">
+            </a-image>
+            <a-image id="go-around-right" class="raycastable hotspot"
+                position="1.2 1 -2" scale="0.4 0.4 0.4" src="#hotspot-right">
+            </a-image>
+        </a-entity>
+
+        <a-entity id="rig" position="0 0 0">
+            <a-entity id="cam" camera look-controls>
+                <a-entity cursor="fuse:true;fuseTimeout:2000"
+                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8"
+                    material="shader:flat;color:#ff0000"
+                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                    raycaster="objects:.raycastable; far: 100;">
                 </a-entity>
             </a-entity>
-            
-            <a-entity id="rig" position="0 0 0">
-                <a-entity id="cam" camera look-controls>
-                    <a-entity
-                        cursor="fuse:true;fuseTimeout:2000"
-                        geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02"
-                        position="0 0 -1.8"
-                        material="shader:flat;color:#ff0000"
-                        animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
-                        raycaster="objects:.raycastable; far: 100;"
-                    >
-                    </a-entity>
-                </a-entity>
-            </a-entity>
-        </a-scene>
+        </a-entity>
 
-        <script src="./js/general/hotspot.js"></script>
-        <script src="./js/general/play-on-window-click.js"></script>
-        <script src="./js/general/video-controls.js"></script>
-        <script src="./js/general/vr-controller.js"></script>
-    </body>
+        <a-entity class="geo-set">
+            <a-image src="./img/anatomy/info-brain.png" position="0.32 0.86 -2" scale="0.40 0.40 0.40"></a-image>
+            <a-image src="./img/anatomy/info-heart.png" position="0.32 -0.04 -2" scale="0.40 0.40 0.40"></a-image>
+            <a-image src="./img/anatomy/info-stomach.png" position="0.32 -0.48 -2" scale="0.40 0.40 0.40"></a-image>
+            <a-image src="./img/anatomy/info-kidneys.png" position="0.32 -0.75 -2" scale="0.40 0.40 0.40"></a-image>
+            <a-image src="./img/anatomy/info-reproductive.png" position="0.32 -1 -2" scale="0.20 0.20 0.20"></a-image>
+        </a-entity>
+    </a-scene>
+
+    <!-- <script src="./js/general/hotspot.js"></script> -->
+    <script src="./js/general/play-on-window-click.js"></script>
+    <script src="./js/general/video-controls.js"></script>
+    <script src="./js/general/vr-controller.js"></script>
+    <script src="./js/controllers/biology-controller.js"></script>
+</body>
+
 </html>

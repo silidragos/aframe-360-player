@@ -32,15 +32,17 @@ AFRAME.registerComponent('video-360-play-pause', {
 
     reinitVideoListeners(){
         if(this.video !== undefined){
+            this.video.pause();
             this.video.onplay = undefined;
             this.video.onpause = undefined;
         }
 
         this.video = document.getElementById('skybox').components.material.material.map.image;
-
+        console.log("new video", this.video);
         this.video.onplay = this.startVideo.bind(this);
         this.video.onpause = this.pauseVideo.bind(this);
 
+        this.pauseVideo();
     },
 
     pauseVideo: function() {
