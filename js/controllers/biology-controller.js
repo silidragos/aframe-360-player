@@ -37,15 +37,18 @@ class BiologyController {
             {
                 idx: 2,
                 videoId: 'run_side',
-                pauseAt:0
+                pauseAt: 0
             }, {
                 idx: 3,
                 videoId: 'swimming',
-                pauseAt:6
+                pauseAt: 6
             }
         ];
 
+        this.geoSets = document.getElementsByClassName("geo-set");
+
         this.currentIdx = 0;
+        this.lastTimeStep = 0;
 
         this.nextVideoBut.addEventListener("click", () => {
             this.setNextVideo();
@@ -58,18 +61,22 @@ class BiologyController {
         });
         this.setState(0);
 
+        document.addEventListener("videoPlayed", ()=>{
+            this._disableGeoSet(this.geoSets[this.currentIdx]);
+        });
+
     }
 
 
     setState(idx) {
+        this._disableGeoSet(this.geoSets[this.currentIdx]);
         this.currentIdx = idx;
 
         if (this.currentVideo !== undefined) {
             this.currentVideo.removeEventListener("timeupdate", this._handleTimeUpdate);
         }
         this.currentVideo = document.getElementById(this.videos[this.currentIdx].videoId);
-        this.currentVideo.currentTime = 0;
-        this.wasPaused = false;
+        this.currentVideo.currentTime = this.lastTimeStep = 0;
         this.currentVideo.addEventListener("timeupdate", this._handleTimeUpdate);
 
         this.skybox.setAttribute('src', "#" + this.videos[idx].videoId);
@@ -105,10 +112,29 @@ class BiologyController {
 
     _handleTimeUpdate() {
         console.log(this.currentVideo.currentTime);
-        if(this.currentVideo.currentTime > this.videos[this.currentIdx].pauseAt && !this.wasPaused){
-            console.log("Paused!");
-            this.wasPaused = true;
+        if (this.currentVideo.currentTime > this.videos[this.currentIdx].pauseAt && this.lastTimeStep <= this.videos[this.currentIdx].pauseAt) {
             this.currentVideo.pause();
+            this._enableGeoSet(this.geoSets[this.currentIdx]);
+        }
+        this.lastTimeStep = this.currentVideo.currentTime;
+    }
+
+    _enableGeoSet(geoSet) {
+        geoSet.setAttribute("visible", true);
+        for (var i = 0, len = geoSet.childElementCount; i < len; ++i) {
+            const child = geoSet.children[i];
+            if (child.classList.contains("to-raycast")) {
+                child.classList.add("raycastable");
+            }
+        }
+    }
+
+    _disableGeoSet(geoSet) {
+        geoSet.setAttribute("visible", false);
+        document.getElementById("panel").setAttribute("visible", false);
+        for (var i = 0, len = geoSet.childElementCount; i < len; ++i) {
+            const child = geoSet.children[i];
+            child.classList.remove("raycastable");
         }
     }
 

@@ -54,6 +54,7 @@ AFRAME.registerComponent('video-360-play-pause', {
     startVideo: function() {
         console.log("video played");
         this.data.isPlaying = true;
+        document.dispatchEvent(new Event("videoPlayed"));
         this.el.setAttribute('src', this.data.pauseIcon);
     }
 });
