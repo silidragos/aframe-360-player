@@ -199,7 +199,7 @@ class IndexController {
             topic: "Angle gears and rack and pinion gears, parallel linkage",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./",
+            link: "./da-vinci.html",
             rowspan:3
         }, {
             id: "26",
