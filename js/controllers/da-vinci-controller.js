@@ -12,7 +12,7 @@ class DaVinciController extends StepsController{
         },{
             startTime:21,
             endTime: 21.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[0],
             paused:true,
         },
         //Anemometer: 00:21 - 00:33
@@ -24,7 +24,7 @@ class DaVinciController extends StepsController{
         },{
             startTime: 33.0,
             endTime: 33.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[1],
             paused:true,
         },
         //Vertical Ball: 00:33 - 00:43
@@ -36,7 +36,7 @@ class DaVinciController extends StepsController{
         },{
             startTime: 43.0,
             endTime: 43.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[2],
             paused:true,
         },
         //Printing press: 00:43 - 01:02
@@ -48,43 +48,43 @@ class DaVinciController extends StepsController{
         },{
             startTime: 62.0,
             endTime: 62.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[3],
             paused:true,
         },
-        //Revolving Crane: 01:02 - 01:13
+        //Revolving Crane: 01:02 - 01:27
         {
             startTime: 63,
-            endTime: 73,
+            endTime: 87,
             elementToUnhide: null,
             paused: false,
         },{
-            startTime: 73.0,
-            endTime: 73.5,
-            elementToUnhide: null,
+            startTime: 87.0,
+            endTime: 87.5,
+            elementToUnhide: geos[4],
             paused:true,
         },
-        //Archimedes Screw: 01:13 - 01:58
+        //Archimedes Screw: 01:27 - 01:37
         {
-            startTime: 74,
-            endTime: 118,
+            startTime: 88,
+            endTime: 97,
             elementToUnhide: null,
             paused: false,
         },{
-            startTime: 118.0,
-            endTime: 118.5,
-            elementToUnhide: null,
+            startTime: 97.0,
+            endTime: 97.5,
+            elementToUnhide: geos[5],
             paused:true,
         },
-        //Machine Gun: 01:58 - 02:31
+        //Machine Gun: 01:37 - 02:31
         {
-            startTime: 119,
+            startTime: 98,
             endTime: 151,
             elementToUnhide: null,
             paused: false,
         },{
             startTime: 151.0,
             endTime: 151.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[6],
             paused:true,
         },
         //Ornitopter: 02:31 - 03:02
@@ -96,7 +96,7 @@ class DaVinciController extends StepsController{
         },{
             startTime: 182.0,
             endTime: 182.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[7],
             paused:true,
         },
         //Oil Press: 03:02 - 03:19
@@ -108,7 +108,7 @@ class DaVinciController extends StepsController{
         },{
             startTime: 199.0,
             endTime: 199.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[8],
             paused:true,
         },
         //Hydraulic Saw: 03:19 - 04:58
@@ -120,7 +120,7 @@ class DaVinciController extends StepsController{
         },{
             startTime: 298.0,
             endTime: 298.5,
-            elementToUnhide: null,
+            elementToUnhide: geos[9],
             paused:true,
         }];
         this.videos = [

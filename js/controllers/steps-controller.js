@@ -57,6 +57,10 @@ class StepsController {
 
         if (oldEl !== null && oldEl.elementToUnhide !== null) {
             oldEl.elementToUnhide.setAttribute("visible", false);
+            if(document.getElementById("panel")){
+                document.getElementById("panel").setAttribute("visible", false);
+            }
+
             let raycastables = oldEl.elementToUnhide.getElementsByClassName("to-raycast");
             console.log("hide", raycastables);
             for (const raycastable of raycastables) {
