@@ -112,7 +112,7 @@ class IndexController {
             topic: "The device; Operating an electronic microscope",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./",
+            link: "./electronic-microscope.html",
             rowspan:3
         }, {
             id: "15",
