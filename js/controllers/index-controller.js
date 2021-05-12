@@ -269,7 +269,7 @@ class IndexController {
             topic: "Metal alloys, Disc brake structure",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: ""
+            link: "./optical-microscope.html"
         }, {
             id: "35",
             title: "Plasma Injection",
