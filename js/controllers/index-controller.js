@@ -151,7 +151,7 @@ class IndexController {
             topic: "Friction drag; Aerodynamics",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./aerodynamics.html"
         }, {
             id: "20",
             title: "Lake Types",
