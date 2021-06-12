@@ -131,11 +131,23 @@ class IndexController {
         }, {
             id: "17",
             title: "Ferrari - Sports car engines",
-            discipline: "Physics",
-            topic: "Work- product of force and displacement, energy and power",
-            ageGroup: "??",
+            discipline: "Mechanics, Engineering",
+            topic: "Ferrari and the Main Components of a Car Engine",
+            ageGroup: "15-16",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./",
+            rowspan:2,
+            lessonPlanUK: './pdfs/02_Lesson Plan_Ferrari_Mechanics_17_EN.pdf',
+            lessonPlanIt: './pdfs/02_Lesson Plan_Ferrari_Mechanics_17_IT.pdf'
+        }, {
+            id: "17.1",
+            discipline: "History",
+            topic: "Historical Iconic Images: Ferrari Prancing Horse",
+            ageGroup: "15-16",
+            lessonPlan: "TBD",
+            link: "./",
+            lessonPlanUK: './pdfs/01_Lesson Plan_Ferrari_History_18_EN.pdf',
+            lessonPlanIt: './pdfs/01_Lesson Plan_Ferrari_History_18_IT.pdf'
         },{
             id: "18",
             title: "Flora",
@@ -179,35 +191,70 @@ class IndexController {
         }, {
             id: "23",
             title: "Leaning Tower of Pisa",
-            rowspan:2,
+            rowspan:3,
             discipline: "Math",
             topic: "Collinear points, circle, adjacent angles, parallelism, geometric forms, plane and space geometry",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./math.html"
+            link: "./math.html",
+            lessonPlanUK: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_EN.pdf',
+            lessonPlanIt: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_IT.pdf'
         }, {
             id: "24",
             discipline: "Math",
-            topic: "Collinear points, circle, adjacent angles, parallelism, geometric forms, plane and space geometry",
-            ageGroup: "??",
+            topic: "Types of angles, Pythagorean Theorem",
+            ageGroup: "15-16",
             lessonPlan: "TBD",
-            link: "./math.html"
+            link: "./math.html",
+            lessonPlanUK: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_EN.pdf',
+            lessonPlanIt: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_IT.pdf'
+        }, {
+            id: "24.5",
+            discipline: "Geography",
+            topic: "Geographical landmarks",
+            ageGroup: "13-14",
+            lessonPlan: "TBD",
+            link: "./math.html",
+            lessonPlanUK: './pdfs/04_Lesson Plan_Pisa Leaning Tower_Geography_26_EN.pdf',
+            lessonPlanIt: './pdfs/04_Lesson Plan_Pisa Leaning Tower_Geography_26_IT.pdf'
         }, {
             id: "25",
             title: "Leonardo da Vinci machines Working models",
-            discipline: "Physics",
-            topic: "Angle gears and rack and pinion gears, parallel linkage",
-            ageGroup: "??",
+            discipline: "Robotics",
+            topic: "Leonardo da Vinci’ Robot; Application of robotics in real life",
+            ageGroup: "15-16",
             lessonPlan: "TBD",
             link: "./da-vinci.html",
-            rowspan:3
+            rowspan:5,
+            lessonPlanUK: './pdfs/06_Lesson Plan_Leonardo da Vinci_Robotics_27_EN.pdf',
+            lessonPlanIt: './pdfs/06_Lesson Plan_Leonardo da Vinci_Robotics_27_IT.pdf'
+        }, {
+            id: "25.5",
+            discipline: "Engineering",
+            topic: "Leonardo da Vinci, the Naturalistic Engineer; Engineering and natural observation",
+            ageGroup: "15-16",
+            lessonPlan: "TBD",
+            link: "./da-vinci.html",
+            lessonPlanUK: './pdfs/07_Lesson Plan_Leonardo da Vinci_Engineering_28_EN.pdf',
+            lessonPlanIt: './pdfs/07_Lesson Plan_Leonardo da Vinci_Engineering_28_IT.pdf'
         }, {
             id: "26",
             discipline: "Mechanics",
             topic: "Flying machines, working models (mechanisms, earth, water, air, fire)",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./da-vinci.html",
+            lessonPlanUK: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_EN.pdf',
+            lessonPlanIt: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_IT.pdf'
+        }, {
+            id: "26.5",
+            discipline: "Mechanics",
+            topic: "Chain Drive Mechanism ; Application of mechanics in real life",
+            ageGroup: "15-16",
+            lessonPlan: "TBD",
+            link: "./da-vinci.html",
+            lessonPlanUK: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_EN.pdf',
+            lessonPlanIt: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_IT.pdf'
         }, {
             id: "27",
             discipline: "History",
@@ -227,10 +274,12 @@ class IndexController {
             id: "29",
             title: "Mediterranean Vegetation",
             discipline: "Biology",
-            topic: "Mediterranean vegetation, plans, environment",
-            ageGroup: "??",
+            topic: "Mediterranean vegetation",
+            ageGroup: "15-16",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./",
+            lessonPlanUK: './pdfs/08_Lesson Plan_Mediterranean Vegetation_Biology_33_EN.pdf',
+            lessonPlanIt: './pdfs/08_Lesson Plan_Mediterranean Vegetation_Biology_33_IT.pdf'
         },{
             id: "30",
             title: "Movement and coordination at the gym",
@@ -380,13 +429,14 @@ class IndexController {
     setMaterials(filter) {
         let table = document.querySelector("#main-table tbody");
         table.innerHTML = "";
+        let id = 1;
         for (let row of this.classes) {
             if (filter !== "all" && !row.discipline.toLowerCase().includes(filter)) {
                 continue;
             }
             let rowEl = document.createElement("tr");
             let cell = document.createElement("td");
-            cell.innerText = row.id;
+            cell.innerText = id;
             rowEl.appendChild(cell);
 
             if (row.title) {
@@ -419,10 +469,75 @@ class IndexController {
             rowEl.appendChild(cell);
 
             cell = document.createElement("td");
-            cell.innerText = row.lessonPlan;
+            let lessonPlanWrapper = document.createElement("span");
+
+            let lessonPlanText = document.createElement("p");
+            lessonPlanText.innerText = "Lesson Plan";
+            lessonPlanWrapper.appendChild(lessonPlanText);
+
+            let anchor = document.createElement("a");
+            if(row.lessonPlanUK !== undefined){
+                anchor.href = row.lessonPlanUK;
+                anchor.target = "_blank";
+            }
+            let flagUK = document.createElement("img");
+            flagUK.src = "./img/flags/uk.jpg";
+            flagUK.classList.add("flag");
+            anchor.appendChild(flagUK);
+            lessonPlanWrapper.appendChild(anchor);
+
+            anchor = document.createElement("a");
+            if(row.lessonPlanRo !== undefined){
+                anchor.href = row.lessonPlanRo;
+                anchor.target = "_blank";
+            }
+            let flagRo = document.createElement("img");
+            flagRo.src = "./img/flags/ro.jpg";
+            flagRo.classList.add("flag");
+            lessonPlanWrapper.appendChild(flagRo);
+            anchor.appendChild(flagRo);
+            lessonPlanWrapper.appendChild(anchor);
+
+            anchor = document.createElement("a");
+            if(row.lessonPlanLit !== undefined){
+                anchor.href = row.lessonPlanLit;
+                anchor.target = "_blank";
+            }
+            let flagLithuania = document.createElement("img");
+            flagLithuania.src = "./img/flags/lithuania.jpg";
+            flagLithuania.classList.add("flag");
+            anchor.appendChild(flagLithuania);
+            lessonPlanWrapper.appendChild(anchor);
+
+            anchor = document.createElement("a");
+            if(row.lessonPlanPor !== undefined){
+                anchor.href = row.lessonPlanPor;
+                anchor.target = "_blank";
+            }
+            let flagPor = document.createElement("img");
+            flagPor.src = "./img/flags/portugal.jpg";
+            flagPor.classList.add("flag");
+            anchor.appendChild(flagPor);
+            lessonPlanWrapper.appendChild(anchor);
+
+            anchor = document.createElement("a");
+            if(row.lessonPlanIt !== undefined){
+                anchor.href = row.lessonPlanIt;
+                anchor.target = "_blank";
+            }
+            let flagItaly = document.createElement("img");
+            flagItaly.src = "./img/flags/italy.jpg";
+            flagItaly.classList.add("flag");
+            anchor.appendChild(flagItaly);
+            lessonPlanWrapper.appendChild(anchor);
+
+            cell.appendChild(lessonPlanWrapper);
+            // cell.innerText = row.lessonPlan;
             rowEl.appendChild(cell);
 
             table.appendChild(rowEl);
+
+            id++;
         }
     }
 

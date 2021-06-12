@@ -87,3 +87,13 @@ footer{
     width: 80%;
     margin:auto;
 }
+
+
+table .flag{
+    width: 50px;
+    padding: 5px;
+}
+
+table a:not([href]) .flag{
+    filter: saturate(5%);
+}
