@@ -40,7 +40,7 @@ class IndexController {
             topic: "",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./moon.html"
         }, {
             id: "6",
             title: "Caves",
