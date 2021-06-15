@@ -13,8 +13,8 @@ class IndexController {
             id: "2",
             title: "Architectural buildings",
             discipline: "Math",
-            topic: "buildings, pieces of architecture, pyramid, prism, square, rectangle, cone, roll, etc.",
-            ageGroup: "??",
+            topic: "The regular pyramid; pyramid, high, surface area, volume",
+            ageGroup: "15",
             lessonPlan: "TBD",
             link: "./",
             rowspan:2
@@ -28,19 +28,21 @@ class IndexController {
         },{
             id: "4",
             title: "Architectural bridges and roads",
-            discipline: "Technology",
-            topic: "Architectural styles",
-            ageGroup: "??",
+            discipline: "Engineering",
+            topic: "Analysis and design of bridge structures",
+            ageGroup: "16-17",
             lessonPlan: "TBD",
             link: "./",
         }, {
             id: "5",
             title: "Astronomy",
-            discipline: "Astronomy",
-            topic: "",
-            ageGroup: "??",
+            discipline: "Physics, Astronomy",
+            topic: "Celestial objects, planets, moons, stars, Lunar and Solar Eclipses",
+            ageGroup: "13",
             lessonPlan: "TBD",
-            link: "./moon.html"
+            link: "./moon.html",
+            lessonPlanUK: './pdfs/o3.2_lesson plan_Astronomy_5_EN.pdf',
+            lessonPlanLit: './pdfs/o3.2_lesson plan_Astronomy_5_LT.pdf'
         }, {
             id: "6",
             title: "Caves",
@@ -70,15 +72,15 @@ class IndexController {
             title: "Chemistry Experiments",
             discipline: "Chemistry",
             topic: "Coloured flames; Green Chemical Volcano;",
-            ageGroup: "??",
+            ageGroup: "15-16",
             lessonPlan: "TBD",
             link: "./chemistry-2.html"
         }, {
             id: "10",
             title: "Chemistry Experiments",
             discipline: "Chemistry",
-            topic: "Coloured flames; 'Fireflies' - energetic oxidation of alcohols",
-            ageGroup: "??",
+            topic: "Coloured flames; 'Fireflies' - energetic oxidation of alcohols; Hydrogen",
+            ageGroup: "16-17",
             lessonPlan: "TBD",
             link: "./chemistry-3.html"
         }, {
@@ -152,8 +154,8 @@ class IndexController {
             id: "18",
             title: "Flora",
             discipline: "Biology",
-            topic: "Plants, Gymnosperms, Angiosperms, Ferns, Moss",
-            ageGroup: "??",
+            topic: "Plant fertilization and development",
+            ageGroup: "15-16",
             lessonPlan: "TBD",
             link: "./"
         }, {
@@ -184,8 +186,8 @@ class IndexController {
         }, {
             id: "22",
             discipline: "Physics",
-            topic: "What is a Laser? How lasers work? How is it used?",
-            ageGroup: "??",
+            topic: "Radiation spectrum, linear, band and continuous radiation spectrum, absorption spectrum, spectral analysis.",
+            ageGroup: "16",
             lessonPlan: "TBD",
             link: "./"
         }, {
@@ -193,8 +195,8 @@ class IndexController {
             title: "Leaning Tower of Pisa",
             rowspan:3,
             discipline: "Math",
-            topic: "Collinear points, circle, adjacent angles, parallelism, geometric forms, plane and space geometry",
-            ageGroup: "??",
+            topic: "Length and area of the cut arc",
+            ageGroup: "16",
             lessonPlan: "TBD",
             link: "./math.html",
             lessonPlanUK: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_EN.pdf',
@@ -240,8 +242,8 @@ class IndexController {
         }, {
             id: "26",
             discipline: "Mechanics",
-            topic: "Flying machines, working models (mechanisms, earth, water, air, fire)",
-            ageGroup: "??",
+            topic: "Self-supporting bridge; connecting element of walls, supports.",
+            ageGroup: "17-18",
             lessonPlan: "TBD",
             link: "./da-vinci.html",
             lessonPlanUK: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_EN.pdf',
@@ -292,15 +294,15 @@ class IndexController {
         }, {
             id: "31",
             discipline: "Biology",
-            topic: "Muscles, Bones and Central Nervous System",
-            ageGroup: "??",
+            topic: "The importance of physical activity for human health",
+            ageGroup: "16-17",
             lessonPlan: "TBD",
             link: "./biology.html"
         }, {
             id: "32",
-            discipline: "Biology",
+            discipline: "CLIL / Biology",
             topic: "Anatomy and English language, vocabulary ",
-            ageGroup: "??",
+            ageGroup: "14-15",
             lessonPlan: "TBD",
             link: "./biology.html"
         }, {
@@ -422,7 +424,7 @@ class IndexController {
             topic: "Animal molds, animal organs, bone system, circulatory system",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./",
+            link: "./zoology.html",
         }]
     }
 

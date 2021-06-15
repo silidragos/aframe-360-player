@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Zoology</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+</head>
+
+<body>
+    <button id="start-video">
+        Start
+    </button>
+
+    <a-scene>
+        <a-assets>
+            <video id="video" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/Zoology.mp4" playsinline
+                webkit-playsinline></video>
+
+            <img id="play-icon" src="./img/play.png" />
+            <img id="pause-icon" src="./img/pause.png" />
+            <img id="next-icon" src="./img/next.png" />
+            <img id="info-icon" src="./img/info.png" />
+        </a-assets>
+
+        <a-videosphere id="skybox" rotation="0 130 0" src="#video"></a-videosphere>
+        <a-entity id="controls-wrapper">
+            <a-image id="video-control" class="raycastable control" video-360-play-pause position="-0.5 1.25 -2"
+                scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+            <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
+                onclick="aerodynamicsController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+        </a-entity>
+
+        <a-entity id="rig" position="0 0 0">
+            <a-entity id="cam" camera look-controls>
+                <a-entity cursor="fuse:true;fuseTimeout:2000"
+                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8"
+                    material="shader:flat;color:#ff0000"
+                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                    raycaster="objects:.raycastable; far: 100;">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+        
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="0.676 -0.43 3.942"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/01.jpg" scale="20 12 20" position="0 8 0"></a-image>
+            </a-image>
+        </a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="-0.827 -1.31 -3.913"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/02.jpg" scale="20 12 20" position="0 6 0"></a-image>
+            </a-image>
+        </a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="-2.822 -1.97 2.83"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/03.jpg" scale="20 12 20" position="0 6 0"></a-image>
+            </a-image>
+        </a-entity>
+        
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="3.206 -0.43 2.391"
+                look-at="#cam" show-child-on-click  >
+                <a-image src="./img/zoology/04.jpg" scale="20 12 20" position="0 6 0"></a-image>
+            </a-image>
+        </a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="1.703 -1.97 3.619"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/05.jpg" scale="20 12 20" position="0 6 0"></a-image>
+            </a-image>
+        </a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="3.03 0 2.6097"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/06.jpg" scale="14 12 14" position="0 6 0"></a-image>
+            </a-image>
+        </a-entity>
+        
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="-2.97 -0.65 -2.674"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/07.jpg" scale="14 16 14" position="0 8 0"></a-image>
+            </a-image>
+        </a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="-1.42 -1.53 3.739"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/08.jpg" scale="14 16 14" position="0 8 0"></a-image>
+            </a-image>
+        </a-entity>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/zoology/buton.png" scale=".5 .5 .5" position="-1.928 0 3.504"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/zoology/09.jpg" scale="14 16 14" position="0 8 0"></a-image>
+            </a-image>
+        </a-entity>
+    </a-scene>
+
+    <script src="./js/general/info-points.js"></script>
+    <script src="./js/general/hotspot.js"></script>
+    <script src="./js/general/play-on-window-click.js"></script>
+    <script src="./js/general/video-controls.js"></script>
+    <script src="./js/general/vr-controller.js"></script>
+    <script src="./js/controllers/steps-controller.js"></script>
+    <script src="./js/controllers/zoology-controller.js"></script>
+    <!-- <script src="./js/libs/dat.gui.min.js"></script>
+    <script src="./js/general/debug-utils.js"></script> -->
+
+</body>
+
+</html>
