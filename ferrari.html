@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Ferrari Museum</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+</head>
+
+<body>
+    <button id="start-video">
+        Start
+    </button>
+
+    <a-scene>
+        <a-assets>
+            <video id="video" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/Ferrari+Museum.mp4" playsinline
+                webkit-playsinline></video>
+
+            <img id="play-icon" src="./img/play.png" />
+            <img id="pause-icon" src="./img/pause.png" />
+            <img id="next-icon" src="./img/next.png" />
+            <img id="info-icon" src="./img/info.png" />
+        </a-assets>
+
+        <a-videosphere id="skybox" rotation="0 130 0" src="#video"></a-videosphere>
+        <a-entity id="controls-wrapper">
+            <a-image id="video-control" class="raycastable control" video-360-play-pause position="-0.5 1.25 -2"
+                scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+            <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
+                onclick="aerodynamicsController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+        </a-entity>
+
+        <a-entity id="rig" position="0 0 0">
+            <a-entity id="cam" camera look-controls>
+                <a-entity cursor="fuse:true;fuseTimeout:2000"
+                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8"
+                    material="shader:flat;color:#ff0000"
+                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                    raycaster="objects:.raycastable; far: 100;">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+        
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/ferrari/Buton00.jpg" scale="1 .5 .5" position="2.329 -0.65 -3.251"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/ferrari/01V8Pistons.jpg" scale="15 12 15" position="0 8 0"></a-image>
+            </a-image>
+            
+            <a-image class='to-raycast' src="./img/ferrari/Buton00.jpg" scale="1 .5 .5" position="2.841 0.24 2.815"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/ferrari/02FerrariDinoGTS.jpg" scale="15 12 15" position="0 8 0"></a-image>
+            </a-image>
+            
+            <a-image class='to-raycast' src="./img/ferrari/Buton00.jpg" scale="1 .5 .5" position="-3.013 -0.65 2.63"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/ferrari/03FerrariV8.jpg" scale="12 12 12" position="0 8 0"></a-image>
+            </a-image>
+        </a-entity>
+
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/ferrari/Buton01.png" scale=".5 .5 .5" position="-1.099 0.46 -3.845"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/ferrari/04FerrariDaytona.jpg" scale="20 12 20" position="0 8 0"></a-image>
+            </a-image>
+            
+            <a-image class='to-raycast' src="./img/ferrari/Buton01.png" scale=".5 .5 .5" position="3.432 0.68 -2.053"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/ferrari/05Ferrari550.jpg" scale="20 12 20" position="0 8 0"></a-image>
+            </a-image>
+            
+            <a-image class='to-raycast' src="./img/ferrari/Buton01.png" scale=".5 .5 .5" position="0.676 0.68 3.942"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/ferrari/06FerrariFF.jpg" scale="20 12 20" position="0 8 0"></a-image>
+            </a-image>
+        </a-entity>
+
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/ferrari/Buton01.png" scale=".5 .5 .5" position="-3.933 1.34 -0.7255"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/ferrari/07EnzoFerrari.jpg" scale="20 12 20" position="0 8 0"></a-image>
+            </a-image>
+        </a-entity>
+    </a-scene>
+
+    <script src="./js/general/info-points.js"></script>
+    <script src="./js/general/hotspot.js"></script>
+    <script src="./js/general/play-on-window-click.js"></script>
+    <script src="./js/general/video-controls.js"></script>
+    <script src="./js/general/vr-controller.js"></script>
+    <script src="./js/controllers/steps-controller.js"></script>
+    <script src="./js/controllers/ferrari-controller.js"></script>
+    <!-- <script src="./js/libs/dat.gui.min.js"></script>
+    <script src="./js/general/debug-utils.js"></script> -->
+
+</body>
+
+</html>

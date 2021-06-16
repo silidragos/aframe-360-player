@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Laser </title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+</head>
+
+<body>
+    <button id="start-video">
+        Start
+    </button>
+
+    <a-scene>
+        <a-assets>
+            <video id="video" crossorigin="anonymous" preload="auto"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/Laser-1-1.m4v" playsinline
+                webkit-playsinline></video>
+
+            <img id="play-icon" src="./img/play.png" />
+            <img id="pause-icon" src="./img/pause.png" />
+            <img id="next-icon" src="./img/next.png" />
+            <img id="info-icon" src="./img/info.png" />
+        </a-assets>
+
+        <a-videosphere id="skybox" rotation="0 130 0" src="#video"></a-videosphere>
+        <a-entity id="controls-wrapper">
+            <a-image id="video-control" class="raycastable control" video-360-play-pause position="-0.5 1.25 -2"
+                scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+            <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
+                onclick="aerodynamicsController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+            </a-image>
+        </a-entity>
+
+        <a-entity id="rig" position="0 0 0">
+            <a-entity id="cam" camera look-controls>
+                <a-entity cursor="fuse:true;fuseTimeout:2000"
+                    geometry="primitive:ring;radiusInner:0.01;radiusOuter:0.02" position="0 0 -1.8"
+                    material="shader:flat;color:#ff0000"
+                    animation__mouseenter="property:scale;to:3 3 3;startEvents:mouseenter;endEvents:mouseleave;dir:reverse;dur:2000;loop:1"
+                    raycaster="objects:.raycastable; far: 100;">
+                </a-entity>
+            </a-entity>
+        </a-entity>
+        
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/laser-2/00ButonSpeedOfLight.jpg" scale="1 .5 .5" position="-3.605 0 1.731"
+                look-at="#cam" show-child-on-click >
+                <a-image src="./img/laser-2/01LASERAcronym.jpg" scale="3.5 5 3.5" position="0 3 0"></a-image>
+            </a-image>
+            
+            <a-image class='to-raycast' src="./img/laser-2/00ButonSpeedOfLight.jpg" scale="1 .5 .5" position="0.399 0 3.98"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/laser-2/02LASERDefinition.jpg" scale="5 5 5" position="0 3 0"></a-image>
+            </a-image>
+        </a-entity>
+
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/laser-2/00ButonSpeedOfLight.jpg" scale=".5 .5 .5" position="-3.873 0 -0.998"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/laser-2/03Atoms.jpg" scale="10 7 10" position="0 5.5 0"></a-image>
+            </a-image>
+            
+            <a-image class='to-raycast' src="./img/laser-2/00ButonSpeedOfLight.jpg" scale=".5 .5 .5" position="-3.154 0.68 -2.460"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/laser-2/04LaserPhotons.jpg" scale="10 7 10" position="0 5.5 0"></a-image>
+            </a-image>
+        </a-entity>
+
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/laser-2/00ButonSpeedOfLight.jpg" scale=".5 .5 .5" position="-3.605 0 1.731"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/laser-2/05LaserPump.jpg" scale="7 10 7" position="0 5.5 0"></a-image>
+            </a-image>
+        </a-entity>
+
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/laser-2/00ButonSpeedOfLight.jpg" scale=".5 .5 .5" position="-3.605 0 1.731"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/laser-2/06Applications.jpg" scale="7 10 7" position="0 5.5 0"></a-image>
+            </a-image>
+            
+            <a-image class='to-raycast' src="./img/laser-2/00ButonSpeedOfLight.jpg" scale=".5 .5 .5" position="0.399 0 3.98"
+                look-at="#cam" show-child-on-click>
+                <a-image src="./img/laser-2/07EyeDamage.jpg" scale="7 12 7" position="0 6.5 0"></a-image>
+            </a-image>
+        </a-entity>
+    </a-scene>
+
+    <script src="./js/general/info-points.js"></script>
+    <script src="./js/general/hotspot.js"></script>
+    <script src="./js/general/play-on-window-click.js"></script>
+    <script src="./js/general/video-controls.js"></script>
+    <script src="./js/general/vr-controller.js"></script>
+    <script src="./js/controllers/steps-controller.js"></script>
+    <script src="./js/controllers/laser-1-controller.js"></script>
+    <script src="./js/libs/dat.gui.min.js"></script>
+    <script src="./js/general/debug-utils.js"></script>
+
+</body>
+
+</html>

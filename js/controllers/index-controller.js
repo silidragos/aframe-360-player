@@ -17,7 +17,8 @@ class IndexController {
             ageGroup: "15",
             lessonPlan: "TBD",
             link: "./",
-            rowspan:2
+            rowspan:2,
+            lessonPlanLit: "./pdfs/o3.2_lesson plan_Regular pyramid_Math_2_LT.pdf"
         }, {
             id: "3",
             discipline: "Technology",
@@ -33,6 +34,7 @@ class IndexController {
             ageGroup: "16-17",
             lessonPlan: "TBD",
             link: "./",
+            lessonPlanLit: './pdfs/o3.2_lesson plan_Engineering_Bridges_4_LT.pdf'
         }, {
             id: "5",
             title: "Astronomy",
@@ -82,7 +84,8 @@ class IndexController {
             topic: "Coloured flames; 'Fireflies' - energetic oxidation of alcohols; Hydrogen",
             ageGroup: "16-17",
             lessonPlan: "TBD",
-            link: "./chemistry-3.html"
+            link: "./chemistry-3.html",
+            lessonPlanUK: './pdfs/o3.2_lesson plan_Hydrogen_Chemistry_10_LT.pdf'
         }, {
             id: "11",
             title: "Chemistry Experiments",
@@ -90,7 +93,8 @@ class IndexController {
             topic: "pH indicator; 'Lava lamp'; Chemical volcano - glycerine burning",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./chemistry-4.html"
+            link: "./chemistry-4.html",
+            lessonPlanLit: './pdfs/o3.2_lesson plan_Hydrogen_Chemistry_10_LT.pdf'
         }, {
             id: "12",
             title: "Chemistry Experiments",
@@ -157,7 +161,8 @@ class IndexController {
             topic: "Plant fertilization and development",
             ageGroup: "15-16",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./",
+            lessonPlanLit:'./pdfs/o3.2_lesson plan_Fertilization in plants_19_LT.pdf'
         }, {
             id: "19",
             title: "Friction drag - Car & Airplane Simulation",
@@ -181,15 +186,17 @@ class IndexController {
             topic: "The process of measuring the speed of particles moving through the air",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./",
-            rowspan: 2
+            link: "./laser-1.html",
+            // rowspan: 2
         }, {
             id: "22",
+            title: "Laser",
             discipline: "Physics",
             topic: "Radiation spectrum, linear, band and continuous radiation spectrum, absorption spectrum, spectral analysis.",
             ageGroup: "16",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./laser-2.html",
+            lessonPlanLit: './pdfs/o3.2_lesson plan_Spectra_Physics_23_LT.pdf'
         }, {
             id: "23",
             title: "Leaning Tower of Pisa",
@@ -200,7 +207,8 @@ class IndexController {
             lessonPlan: "TBD",
             link: "./math.html",
             lessonPlanUK: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_EN.pdf',
-            lessonPlanIt: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_IT.pdf'
+            lessonPlanIt: './pdfs/03_Lesson Plan_Leaning Tower of Pisa_Math_25_IT.pdf',
+            lessonPlanLit: './pdfs/o3.2_lesson plan_Circle sector area_Math_24_LT.pdf'
         }, {
             id: "24",
             discipline: "Math",
@@ -247,7 +255,8 @@ class IndexController {
             lessonPlan: "TBD",
             link: "./da-vinci.html",
             lessonPlanUK: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_EN.pdf',
-            lessonPlanIt: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_IT.pdf'
+            lessonPlanIt: './pdfs/05_Lesson Plan_Leonardo da Vinci_Mechanics_30_IT.pdf',
+            lessonPlanLit: './pdfs/o3.2_lesson plan_self supporting bridge_29_LT.pdf'
         }, {
             id: "26.5",
             discipline: "Mechanics",
@@ -297,14 +306,16 @@ class IndexController {
             topic: "The importance of physical activity for human health",
             ageGroup: "16-17",
             lessonPlan: "TBD",
-            link: "./biology.html"
+            link: "./biology.html",
+            lessonPlanLit: "./pdfs/o3.2_lesson plan_Physical activity for human health_35_LT.pdf"
         }, {
             id: "32",
             discipline: "CLIL / Biology",
             topic: "Anatomy and English language, vocabulary ",
             ageGroup: "14-15",
             lessonPlan: "TBD",
-            link: "./biology.html"
+            link: "./biology.html",
+            lessonPlanUK: './pdfs/o3.2_lesson plan_CLILL_Skeletal-system_36_EN.pdf'
         }, {
             id: "33",
             title: "NC Machine Tools",
@@ -400,7 +411,8 @@ class IndexController {
             topic: "Volcanic Rocks",
             ageGroup: "15-16 years old",
             lessonPlan: "Volcanic Rocks",
-            link: "./roci-vulcanice.html"
+            link: "./roci-vulcanice.html",
+            lessonPlanUK: "./pdfs/O3.2_Lesson plan_Geography_Volcanic Rocks_48_EN.pdf"
         }, {
             id: "45",
             title: "Water treatment plant",
