@@ -371,7 +371,7 @@ class IndexController {
             topic: "Carillon mechanism, lever and pulley system,",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./",
+            link: "./palat.html",
             rowspan:2
         },{
             id: "40",
@@ -420,7 +420,7 @@ class IndexController {
             topic: "Water treatment plant systems, procedures, water filtration",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./",
+            link: "./water-treatment.html",
             rowspan:2
         }, {
             id: "46",
