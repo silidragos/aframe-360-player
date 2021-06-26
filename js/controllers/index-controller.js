@@ -85,7 +85,7 @@ class IndexController {
             ageGroup: "16-17",
             lessonPlan: "TBD",
             link: "./chemistry-3.html",
-            lessonPlanUK: './pdfs/o3.2_lesson plan_Hydrogen_Chemistry_10_LT.pdf'
+            lessonPlanLit: './pdfs/o3.2_lesson plan_Hydrogen_Chemistry_10_LT.pdf'
         }, {
             id: "11",
             title: "Chemistry Experiments",
@@ -444,19 +444,27 @@ class IndexController {
         let table = document.querySelector("#main-table tbody");
         table.innerHTML = "";
         let id = 1;
+        let idx = 0;
+        let isGap = false;
         for (let row of this.classes) {
+            idx++;
             if (filter !== "all" && !row.discipline.toLowerCase().includes(filter)) {
+                isGap = true;
                 continue;
             }
+
             let rowEl = document.createElement("tr");
             let cell = document.createElement("td");
             cell.innerText = id;
             rowEl.appendChild(cell);
 
             if (row.title) {
+                isGap = false;
                 cell = document.createElement("td");
-                if (row.rowspan) {
+                if (row.rowspan && filter === "all") {
                     cell.setAttribute("rowspan", row.rowspan);
+                }else if(row.rowspan && row.rowspan > 1){
+                    isGap = true;
                 }
 
                 let titleParent = cell;
@@ -467,6 +475,27 @@ class IndexController {
                     cell.appendChild(titleParent);
                 }
                 titleParent.innerText = row.title;
+                rowEl.appendChild(cell);
+            }else if(isGap){
+                isGap = true;
+                let lastTitleIdx = idx - 1;
+                while(idx > 0 && this.classes[lastTitleIdx].title === undefined){
+                    console.log(lastTitleIdx);
+                    lastTitleIdx--;
+                }
+                
+                cell = document.createElement("td");
+
+                let lastRow = this.classes[lastTitleIdx];
+
+                let titleParent = cell;
+                if (lastRow.link !== "" && lastRow.link !== "./") {
+                    let link = document.createElement("a");
+                    link.setAttribute("href", lastRow.link);
+                    titleParent = link;
+                    cell.appendChild(titleParent);
+                }
+                titleParent.innerText = lastRow.title;
                 rowEl.appendChild(cell);
             }
 

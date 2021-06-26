@@ -52,17 +52,22 @@ h1{
     padding: 25px 15px;
     margin-top: 25px;
     margin-bottom: 25px;
+
+    font-size: 1.2em;
 }
 
 .filters select{
     width: 350px;
     margin-left: 25px;
+    font-size: 1.2em;
 }
 table{
     border-collapse: collapse;
     width: 80%;
     margin: auto;
     margin-top: 50px;
+
+    font-size: 1.2em;
 }
 
 table,td,th{
