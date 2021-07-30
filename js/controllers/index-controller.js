@@ -60,7 +60,7 @@ class IndexController {
             topic: "Atoms, Molecules",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./chemistry-7.html"
         }, {
             id: "8",
             title: "Chemistry Experiments",
@@ -111,7 +111,8 @@ class IndexController {
             ageGroup: "??",
             lessonPlan: "TBD",
             link: "./chemistry-5.html"
-        }, {
+        },
+        {
             id: "14",
             title: "Electron Microscope",
             discipline: "Physics",
@@ -178,7 +179,7 @@ class IndexController {
             topic: " Natural dam lake, a volcanic lake, artificial/human made dam lake, glacial lake",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./lakes.html"
         }, {
             id: "21",
             title: "Laser",
