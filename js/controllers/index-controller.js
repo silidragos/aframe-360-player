@@ -396,7 +396,7 @@ class IndexController {
             topic: "",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./small-fall-turbine.html"
         }, {
             id: "43",
             title: "Turbine - fluid mechanics",
@@ -404,7 +404,7 @@ class IndexController {
             topic: "",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./wind-turbine.html"
         }, {
             id: "44",
             title: "Volcanic Rocks",
