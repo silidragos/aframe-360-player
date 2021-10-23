@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Wind Turbine</title>
+    <title>Measuring Tools</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -22,7 +22,7 @@
     <a-scene>
         <a-assets>
             <video id="video" crossorigin="anonymous" preload="auto"
-                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/43+Wind+Turbine.mp4"
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/NCMachine+(1).mp4"
                 playsinline webkit-playsinline></video>
 
             <img id="play-icon" src="./img/play.png" />
@@ -37,7 +37,7 @@
                 scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
             <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
-                onclick="windTurbineController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+                onclick="ncMachineController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
         </a-entity>
 
@@ -53,37 +53,48 @@
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/wind-turbine/00ButonWind.jpg" scale="1 .5 .5"
-                position="-3.718 -1 1.474" look-at="#cam" show-child-on-click>
-                <a-image src="./img/wind-turbine/01WindDefinition.jpg" scale="7 8 7" position="0 4.5 0"></a-image>
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="3.99 -1.5 0.083" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/01MetricSystem.jpg" scale="7 6 7" position="0 4.5 0"></a-image>
             </a-image>
-            <a-image class='to-raycast' src="./img/wind-turbine/00ButonWind.jpg" scale="1 .5 .5"
-                position="-3.974 -1.5 -0.448" look-at="#cam" show-child-on-click>
-                <a-image src="./img/wind-turbine/02WindTypes.jpg" scale="7 8 7" position="0 4.5 0"></a-image>
-            </a-image>
-        </a-entity>
-
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/wind-turbine/00ButonWind.jpg" scale="1 .5 .5"
-                position="-3.718 0 1.474" look-at="#cam" show-child-on-click>
-                <a-image src="./img/wind-turbine/03Components.jpg" scale="7 8 7" position="0 4.5 0">
-                </a-image>
-            </a-image>
-            <a-image class='to-raycast' src="./img/wind-turbine/00ButonWind.jpg" scale="1 .5 .5"
-                position="-3.974 0 -0.448" look-at="#cam" show-child-on-click>
-                <a-image src="./img/wind-turbine/04PitchControl.jpg" scale="7 8 7" position="0 4.5 0">
-                </a-image>
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="-0.61 1.12 3.95" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/02SISystem.jpg" scale="7 6 7" position="0 4.5 0"></a-image>
             </a-image>
         </a-entity>
 
         <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/wind-turbine/00ButonWind.jpg" scale="1 .5 .5"
-                position="-3.718 -1 1.474" look-at="#cam" show-child-on-click>
-                <a-image src="./img/wind-turbine/05EarlyHistory.jpg" scale="7 8 7" position="0 4.5 0"></a-image>
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="3.948 0 0.64" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/03Definition.jpg" scale="6 6 6" position="0 4.5 0">
+                </a-image>
             </a-image>
-            <a-image class='to-raycast' src="./img/wind-turbine/00ButonWind.jpg" scale="1 .5 .5"
-                position="-3.974 -1.5 -0.448" look-at="#cam" show-child-on-click>
-                <a-image src="./img/wind-turbine/06LargestWindTurbine.jpg" scale="7 8 7" position="0 4.5 0"></a-image>
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="1.22 -0.43 3.81" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/04MeasuringInstruments.jpg" scale="5 5 5" position="0 4.5 0">
+                </a-image>
+            </a-image>
+        </a-entity>
+
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="3.999 0 0.083" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/05Ruler.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
+            </a-image>
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="-0.0127 0 3.999" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/06LaserMeasurement.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
+            </a-image>
+        </a-entity>
+
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="3.928 0 -0.752" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/07CNCTouchProbe.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
+            </a-image>
+            <a-image class='to-raycast' src="./img/measuring-tools/00ButtonMeasure.png" scale="1 1 1"
+                position="-0.0127 0 3.999" look-at="#cam" show-child-on-click>
+                <a-image src="./img/measuring-tools/08FeedbackLoop.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
             </a-image>
         </a-entity>
     </a-scene>
@@ -94,7 +105,8 @@
     <script src="./js/general/video-controls.js"></script>
     <script src="./js/general/vr-controller.js"></script>
     <script src="./js/controllers/steps-controller.js"></script>
-    <script src="./js/controllers/wind-turbine-controller.js"></script>
+    <script src="./js/controllers/nc-machine-controller.js"></script>
+    <script src="./js/libs/dat.gui.min.js"></script>
     <script src="./js/general/debug-utils.js"></script>
 
 </body>

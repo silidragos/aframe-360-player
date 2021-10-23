@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Electron Microscope</title>
+    <title>Robotics VR</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -22,8 +22,8 @@
     <a-scene>
         <a-assets>
             <video id="video" crossorigin="anonymous" preload="auto"
-                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/Microscop+Electronic-1.mp4" playsinline
-                webkit-playsinline></video>
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/Robotics+(1).mp4"
+                playsinline webkit-playsinline></video>
 
             <img id="play-icon" src="./img/play.png" />
             <img id="pause-icon" src="./img/pause.png" />
@@ -37,7 +37,7 @@
                 scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
             <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
-                onclick="electronicMicroscopeController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+                onclick="roboticsController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
         </a-entity>
 
@@ -52,36 +52,38 @@
             </a-entity>
         </a-entity>
 
-        <a-image id="panel" width="4" height="3" src="" position="-1 0 3.5" look-at="#cam"></a-image>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/robotics/01ButtonRobot.jpg" scale="1 .5 .5"
+                position="-0.313 0 -3.987" look-at="#cam" show-child-on-click>
+                <a-image src="./img/robotics/01RobotDefinition.jpg" scale="4 8 4" position="0 4.5 0"></a-image>
+            </a-image>
+            <a-image class='to-raycast' src="./img/robotics/01ButtonRobot.jpg" scale="1 .5 .5"
+                position="-3.974 -1.5 -0.448" look-at="#cam" show-child-on-click>
+                <a-image src="./img/robotics/02RobotEtimology.jpg" scale="4 8 4" position="0 4.5 0"></a-image>
+            </a-image>
+        </a-entity>
 
         <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems01.png">
+            <a-image class='to-raycast' src="./img/robotics/01ButtonRobot.jpg" scale="1 .5 .5"
+                position="-0.313 0 -3.987" look-at="#cam" show-child-on-click>
+                <a-image src="./img/robotics/03MobileRobots.jpg" scale="6 8 6" position="0 4.5 0">
+                </a-image>
+            </a-image>
+            <a-image class='to-raycast' src="./img/robotics/01ButtonRobot.jpg" scale="1 .5 .5"
+                position="-3.974 0 -0.448" look-at="#cam" show-child-on-click>
+                <a-image src="./img/robotics/04IndustrialRobots.jpg" scale="5 8 5" position="0 4.5 0">
+                </a-image>
             </a-image>
         </a-entity>
+
         <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems02.jpg">
+            <a-image class='to-raycast' src="./img/robotics/01ButtonRobot.jpg" scale="1 .5 .5"
+                position="-0.313 0 -3.987" look-at="#cam" show-child-on-click>
+                <a-image src="./img/robotics/05EducationalRobots.jpg" scale="5 8 5" position="0 4.5 0"></a-image>
             </a-image>
-        </a-entity>
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems03.png">
-            </a-image>
-        </a-entity>
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/lemn01.jpg">
-            </a-image>
-        </a-entity>
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/disc01.jpg">
-            </a-image>
-        </a-entity>
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems04.jpg">
+            <a-image class='to-raycast' src="./img/robotics/01ButtonRobot.jpg" scale="1 .5 .5"
+                position="-3.974 -1.5 -0.448" look-at="#cam" show-child-on-click>
+                <a-image src="./img/robotics/06Japan.jpg" scale="5 8 5" position="0 4.5 0"></a-image>
             </a-image>
         </a-entity>
     </a-scene>
@@ -92,9 +94,9 @@
     <script src="./js/general/video-controls.js"></script>
     <script src="./js/general/vr-controller.js"></script>
     <script src="./js/controllers/steps-controller.js"></script>
-    <script src="./js/controllers/electronic-microscope-controller.js"></script>
+    <script src="./js/controllers/robotics-controller.js"></script>
     <script src="./js/libs/dat.gui.min.js"></script>
-    <!-- <script src="./js/general/debug-utils.js"></script> -->
+    <script src="./js/general/debug-utils.js"></script>
 
 </body>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Electron Microscope</title>
+    <title>NC or CNC Machine</title>
 
     <link rel="stylesheet" href="style.css" />
 
@@ -22,8 +22,8 @@
     <a-scene>
         <a-assets>
             <video id="video" crossorigin="anonymous" preload="auto"
-                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/Microscop+Electronic-1.mp4" playsinline
-                webkit-playsinline></video>
+                src="https://vr-projects-eu.s3.eu-central-1.amazonaws.com/videos/NCMachine+(1).mp4"
+                playsinline webkit-playsinline></video>
 
             <img id="play-icon" src="./img/play.png" />
             <img id="pause-icon" src="./img/pause.png" />
@@ -37,7 +37,7 @@
                 scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
             <a-image src="#next-icon" class="raycastable control" position="1 1.25 -2"
-                onclick="electronicMicroscopeController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
+                onclick="ncMachineController.OnNextStep()" scale="0.4 0.4 0.4" src="#hotspot" look-at="#cam">
             </a-image>
         </a-entity>
 
@@ -52,36 +52,49 @@
             </a-entity>
         </a-entity>
 
-        <a-image id="panel" width="4" height="3" src="" position="-1 0 3.5" look-at="#cam"></a-image>
+        <a-entity class="geo-set" visible="false">
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="3.99 -1.5 0.083" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/01Lathe.jpg" scale="7 4 7" position="0 4.5 0"></a-image>
+            </a-image>
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="-0.61 1.12 3.95" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/02MillingMachine.jpg" scale="7 4 7" position="0 4.5 0"></a-image>
+            </a-image>
+        </a-entity>
 
         <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems01.png">
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="3.948 0 0.64" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/03DefinitionCNC.jpg" scale="6 6 6" position="0 4.5 0">
+                </a-image>
+            </a-image>
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="1.22 -0.43 3.81" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/04InstructionsCNC.jpg" scale="5 5 5" position="0 4.5 0">
+                </a-image>
             </a-image>
         </a-entity>
+
         <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems02.jpg">
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="3.999 0 0.083" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/05Crash.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
+            </a-image>
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="-0.0127 0 3.999" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/06Tools.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
             </a-image>
         </a-entity>
+
         <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems03.png">
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="3.928 0 -0.752" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/07CNCSetup.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
             </a-image>
-        </a-entity>
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/lemn01.jpg">
-            </a-image>
-        </a-entity>
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/disc01.jpg">
-            </a-image>
-        </a-entity>
-        <a-entity class="geo-set" visible="false">
-            <a-image class='to-raycast' src="./img/electronic-microscope/ms.png" scale="1 1 1" position="-3.31 0.21 -2.23"
-                look-at="#cam" open-image="target:panel;src:./img/electronic-microscope/ems04.jpg">
+            <a-image class='to-raycast' src="./img/nc-machine/00ButonCNC.png" scale="1 1 1"
+                position="-0.0127 0 3.999" look-at="#cam" show-child-on-click>
+                <a-image src="./img/nc-machine/08CNCOperator.jpg" scale="5 6 5" position="0 4.5 0"></a-image>
             </a-image>
         </a-entity>
     </a-scene>
@@ -92,9 +105,9 @@
     <script src="./js/general/video-controls.js"></script>
     <script src="./js/general/vr-controller.js"></script>
     <script src="./js/controllers/steps-controller.js"></script>
-    <script src="./js/controllers/electronic-microscope-controller.js"></script>
+    <script src="./js/controllers/nc-machine-controller.js"></script>
     <script src="./js/libs/dat.gui.min.js"></script>
-    <!-- <script src="./js/general/debug-utils.js"></script> -->
+    <script src="./js/general/debug-utils.js"></script>
 
 </body>
 

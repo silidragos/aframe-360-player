@@ -8,7 +8,7 @@ class IndexController {
             topic: "Organisms and their environment",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./altitudinal-flora.html"
         }, {
             id: "2",
             title: "Architectural buildings",
@@ -16,7 +16,7 @@ class IndexController {
             topic: "The regular pyramid; pyramid, high, surface area, volume",
             ageGroup: "15",
             lessonPlan: "TBD",
-            link: "./",
+            link: "./architectural-buildings.html",
             rowspan:2,
             lessonPlanLit: "./pdfs/o3.2_lesson plan_Regular pyramid_Math_2_LT.pdf"
         }, {
@@ -142,7 +142,7 @@ class IndexController {
             topic: "Ferrari and the Main Components of a Car Engine",
             ageGroup: "15-16",
             lessonPlan: "TBD",
-            link: "./",
+            link: "./ferrari.html",
             rowspan:2,
             lessonPlanUK: './pdfs/02_Lesson Plan_Ferrari_Mechanics_17_EN.pdf',
             lessonPlanIt: './pdfs/02_Lesson Plan_Ferrari_Mechanics_17_IT.pdf'
@@ -281,7 +281,7 @@ class IndexController {
             topic: "Cellini School",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./measuring-tools.html"
         }, {
             id: "29",
             title: "Mediterranean Vegetation",
@@ -324,7 +324,7 @@ class IndexController {
             topic: "??",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./nc-machine.html"
         }, {
             id: "34",
             title: "Optical Microscope",
@@ -356,7 +356,7 @@ class IndexController {
             topic: "Subassemblies, stimuli, impuls electric",
             ageGroup: "??",
             lessonPlan: "TBD",
-            link: "./"
+            link: "./robotics.html",
         }, {
             id: "38",
             title: "Shapes of settlements",
