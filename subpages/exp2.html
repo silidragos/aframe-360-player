@@ -1,0 +1,283 @@
+	<html>
+	<head>
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script src="https://unpkg.com/aframe-template-component@3.2.1/dist/aframe-template-component.min.js"></script>
+		
+		<script src="components/slide.js"></script>
+		<script src="components/video_controls.js"></script>
+	</head>
+	<body>
+		<a-scene id="app">
+			<a-asset id="assets">
+				
+				<!--  src="https://cdn.glitch.com/63682f73-b007-4699-995d-7bbcf39b8f3e%2Fscene1.mp4?v=1623074932118"-->
+				<video id="video" crossorigin="anonymous" src="https://cdn.glitch.com/63682f73-b007-4699-995d-7bbcf39b8f3e%2Fexp_2_2.mp4?v=1626345720412" autoplay loop="false"></video>
+				<img src="components/custom-msdf/custom.png"></img>
+				<img id="pause" src="assets/pause.png"></img>
+				<img id="play" src="assets/play.png"></img>
+				
+				<img id="img_1" src="assets/erlenmeyer_flask_250_ml.jpg"></img>
+				<img id="img_2" src="assets/watch_glass_filter_paper.jpg"></img>
+				<img id="img_3" src="assets/cylinder_100_ml.jpg"></img>
+				<img id="img_4" src="assets/pasteur_pippete.jpg"></img>
+				<img id="img_5" src="assets/glass_rod.jpg"></img>
+				<img id="img_6" src="assets/spatula.jpg"></img>
+				<img id="img_7" src="assets/rubber_bulbs.jpg"></img>
+				<img id="img_8" src="assets/graduated_pippete.jpg"></img>
+				<img id="img_10" src="assets/Buchner_funnel_and_filter_flask.jpg"></img>
+				<img id="img_12" src="assets/analytical_balance.jpg"></img>
+				<img id="img_13" src="assets/salicylic_acid.jpg"></img>
+				
+				<img id="img_14" src="assets/hotplate.jpg"></img>
+				<img id="img_15" src="assets/final_result_exp_2.jpg"></img>				
+				
+			</a-asset>
+			
+			<a-videosphere id="#sphere" src="#video" rotation="0 -135 0" ></a-videosphere>
+			</a-plane>		
+			
+			<a-entity video_controls="video_id:#video" position="5 2.5 -13"></a-entity>
+			
+			<script>
+				
+				
+			
+				
+				// Data sample of how to use window slider
+				// TODO : ADD rotation and "time"
+				slide = {
+					"video_id" : "#video",
+					"id" : "myid" ,
+					"position" : "5 1 -13" ,
+					"rotation" : "0 0 0" ,
+					"size" : 
+					{
+						"width" : 8 ,
+						"height" : 5 ,
+					},
+					"title" : "Show Slide" ,
+					"slides" : 
+					[
+						{ 
+							"title" : "Warning",
+							"type" : "text" ,
+							"value" : "This activity must be carried\nout under the supervision\nof your chemistry teacher, after\na careful risk assessment of\nthe experimental protocol." ,
+							"size" : 12 ,
+							"second" : 0,
+							"triggered" : false,
+						},
+					 	{ 
+							"title" : "Experience",
+							"type" : "text" ,
+							"value" : "The synthesis of\naspirin" ,
+							"size" : 12 ,
+							"second" : 5,
+							"triggered" : false,
+						},
+						{
+							"title" : "Erlenmeyer flask 250 mL",
+							"type" : "image" ,
+							"url" : "#img_1" ,
+							"width" : 3 ,
+							"height" : 5 ,
+							"second" : 9,
+							"triggered" : false,
+						},
+						{
+							"title" : "Watch glass",
+							"type" : "image" ,
+							"url" : "#img_2" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" : 12,
+							"triggered" : false,
+						},
+						{
+							"title" : "cylinder 100 mL ",
+							"type" : "image" ,
+							"url" : "#img_3" ,
+							"width" : 3 ,
+							"height" : 5 ,
+							"second" : 15,
+							"triggered" : false,
+						},
+						{
+							"title" : "Pasteur pippete",
+							"type" : "image" ,
+							"url" : "#img_4" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" : 18,
+							"triggered" : false,
+						},
+						{
+							"title" : "Glass rod",
+							"type" : "image" ,
+							"url" : "#img_5" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" : 21,
+							"triggered" : false,
+						},
+						{
+							"title" : "Spatula",
+							"type" : "image" ,
+							"url" : "#img_6" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" : 23,
+							"triggered" : false,
+						},
+						{
+							"title" : "Rubber bulbs",
+							"type" : "image" ,
+							"url" : "#img_7" ,
+							"width" : 3 ,
+							"height" : 5 ,
+							"second" : 25,
+							"triggered" : false,
+						},
+						{
+							"title" : "Graduated pipette",
+							"type" : "image" ,
+							"url" : "#img_8" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" : 28,
+							"triggered" : false,
+						},
+						{
+							"title" : "Filter paper ",
+							"type" : "image" ,
+							"url" : "#img_2" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" : 32,
+							"triggered" : false,
+						},
+						{
+							"title" : "Buchner funnel",
+							"type" : "image" ,
+							"url" : "#img_10" ,
+							"width" : 3 ,
+							"height" : 5 ,
+							"second" : 34,
+							"triggered" : false,
+						},
+						{
+							"title" : "filter flask",
+							"type" : "image" ,
+							"url" : "#img_10" ,
+							"width" : 3 ,
+							"height" : 5 ,
+							"second" : 38,
+							"triggered" : false,
+						},
+						{ 
+							"title" : "Methods",
+							"type" : "text" ,
+							"value" : "Measure the correct amount\nof salicylic acid in\nthe balance." ,
+							"size" : 12 ,
+							"second" : 41,
+							"triggered" : false,
+						},
+						{
+							"title" : "Salicylic acid",
+							"type" : "image" ,
+							"url" : "#img_13" ,
+							"width" : 3 ,
+							"height" : 5 ,
+							"second" : 58,
+							"triggered" : false,
+						},
+						{
+							"title" : "Analytical balance",
+							"type" : "image" ,
+							"url" : "#img_12" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" : 1 * 60 + 12,
+							"triggered" : false,
+						},
+						{ 
+							"title" : "Methods",
+							"type" : "text" ,
+							"value" : "Transfer the\nsolid to the\nErlenmeyer flask" ,
+							"size" : 12 ,
+							"second" :  1 * 60 + 17 ,
+							"triggered" : false,
+						},
+						{ 
+							"title" : "Methods",
+							"type" : "text" ,
+							"value" : "With a graduated\npipette, transfer the\nright amount of\nacetic anhydride" ,
+							"size" : 12 ,
+							"second" :  2 * 60 + 10 ,
+							"triggered" : false,
+						},
+						{ 
+							"title" : "Methods",
+							"type" : "text" ,
+							"value" : "Add 5 drops of\nconcentrated sulfuric\nacid and stir." ,
+							"size" : 12 ,
+							"second" :  3 * 60 + 5 ,
+							"triggered" : false,
+						},
+						{ 
+							"title" : "Methods",
+							"type" : "text" ,
+							"value" : "Place the Erlenmeyer\nflask in the water bath\n(50 - 60 ºC) for 20 min,\nstirring with the glass rod." ,
+							"size" : 12 ,
+							"second" :  3 * 60 + 38 ,
+							"triggered" : false,
+						},
+						{ 
+							"title" : "Methods",
+							"type" : "text" ,
+							"value" : "Cool the mixture in\nan ice bath and\ncarefully add ice-cold\ndistilled water,\nwhile crystals are\nbeing formed." ,
+							"size" : 11 ,
+							"second" :  4 * 60 + 15 ,
+							"triggered" : false,
+						},
+						{ 
+							"title" : "Methods",
+							"type" : "text" ,
+							"value" : "Filter the content of the\nErlenmeyer flask,\nusing a paper filter\npreviously weighed in\na watch glass." ,
+							"size" : 12 ,
+							"second" :  5 * 60 + 24 ,
+							"triggered" : false,
+						},						
+						{
+							"title" : "Result",
+							"type" : "image" ,
+							"url" : "#img_15" ,
+							"width" : 8 ,
+							"height" : 5 ,
+							"second" :  7 * 60 + 20,
+							"triggered" : false,
+						},
+					] 	
+				};
+				
+				app = document.getElementById("app")
+				
+				// script to generate an slider
+				x = document.createElement("a-entity")
+				x.setAttribute("a-slide","json:"+JSON.stringify(slide))				
+				app.appendChild(x)
+				
+			</script>
+			
+
+			<!-- Camera + Cursor. -->
+			<a-camera>
+				<a-cursor
+				id="cursor"
+				animation__click="property: scale; from: 0.1 0.1 0.1; to: 1 1 1; easing: easeInCubic; dur: 150; startEvents: click"
+				animation__clickreset="property: scale; to: 1 1 1; dur: 1; startEvents: animationcomplete__click"
+				animation__fusing="property: scale; from: 1 1 1; to: 0.1 0.1 0.1; easing: easeInCubic; dur: 150; startEvents: fusing">
+				</a-cursor>
+			</a-camera>
+		</a-scene>
+	</body>
+</html>

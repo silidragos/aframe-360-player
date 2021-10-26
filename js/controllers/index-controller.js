@@ -9,7 +9,7 @@ class IndexController {
                 topic: "Minerals, Rocks, Granite, Shale, Quartzite, Gneiss, Moscovite, Biotite, Feldspar, Quartz, Staurolite, Olivine",
                 ageGroup: "12",
                 lessonPlan: "TBD",
-                link: "https://felipegimenezsilva.github.io/douro.html",
+                link: "./subpages/douro.html",
                 lessonPlanUK: './pdfs/25.10/1_O3.2_LessonPlan_Douro_Minerals_EN.docx',
                 lessonPlanIt: './pdfs/25.10/1_O3.2_LessonPlan_Douro_Minerals_IT.docx',
                 lessonPlanLit: './pdfs/25.10/1_O3.2_LessonPlan_Douro_Minerals_LT.docx',
@@ -27,8 +27,7 @@ class IndexController {
                 lessonPlanIt: './pdfs/25.10/2_O3.2_LessonPlan_Douro_Abiotic_IT.docx',
                 lessonPlanLit: './pdfs/25.10/2_O3.2_LessonPlan_Douro_Abiotic_LT.docx',
                 lessonPlanPor: './pdfs/25.10/2_O3.2_LessonPlan_Douro_Abiotic_PT.docx',
-                lessonPlanRo: './pdfs/25.10/2_O3.2_LessonPlan_Douro_Abiotic_RO.docx',
-                link: "https://felipegimenezsilva.github.io/douro.html",
+                lessonPlanRo: './pdfs/25.10/2_O3.2_LessonPlan_Douro_Abiotic_RO.docx'
             },
             {
                 id: "0.75",
@@ -42,7 +41,7 @@ class IndexController {
                 lessonPlanLit: './pdfs/25.10/3_O3.2_LessonPlan_AcidBase_LT.docx',
                 lessonPlanPor: './pdfs/25.10/3_O3.2_LessonPlan_AcidBase_PT.docx',
                 lessonPlanRo: './pdfs/25.10/3_O3.2_LessonPlan_AcidBase_RO.docx',
-                link: "https://felipegimenezsilva.github.io/exp1.html",
+                link: "./subpages/exp1.html",
             },
             {
                 id: "1",
@@ -620,7 +619,7 @@ class IndexController {
                 topic: "Synthesis, reaction yield, product purity, catalyst",
                 ageGroup: "15-16",
                 lessonPlan: "TBD",
-                link: "https://felipegimenezsilva.github.io/exp2.html",
+                link: "./subpages/exp2.html",
                 lessonPlanUK: './pdfs/25.10/48_O3.2_LessonPlan_Synthesis of Aspirin_EN.docx',
                 lessonPlanIt: './pdfs/25.10/48_O3.2_LessonPlan_Synthesis of Aspirin_IT.docx',
                 lessonPlanLit: './pdfs/25.10/48_O3.2_LessonPlan_Synthesis of Aspirin_LT.docx',
