@@ -710,7 +710,7 @@ class IndexController {
                 topic: "Water use statistics, water pollution, water impact agents, water footprint",
                 ageGroup: "??",
                 lessonPlan: "TBD",
-                link: "./"
+                link: "./water-pollution.html"
             },{
                 id: "45",
                 title: "Water treatment plant",
