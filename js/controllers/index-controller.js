@@ -140,7 +140,7 @@ class IndexController {
                 link: "./"
             }, {
                 id: "7",
-                title: "Chemical Reactions - Download App",
+                title: "Chemical Reactions",
                 discipline: "Chemistry",
                 topic: "Combination reaction, reactants, reaction products law of mass action",
                 ageGroup: "13-14",
@@ -150,7 +150,8 @@ class IndexController {
                 lessonPlanLit: './pdfs/25.10/12_O3.2_Lesson plan_Chemical reactions_Combination_LT.docx',
                 lessonPlanPor: './pdfs/25.10/12_O3.2_Lesson plan_Chemical reactions_Combination_PT.docx',
                 lessonPlanRo: './pdfs/25.10/12_O3.2_Lesson plan_Chemical reactions_Combination_RO.docx',
-                link: "https://github.com/RaduStefan999/Chimie_VR"
+                link: "https://www.youtube.com/watch?v=2-upZ2lHHNg",
+                link_download: "https://github.com/RaduStefan999/Chimie_VR"
                 // link: "./chemistry-7.html"
             }, {
                 id: "8",
@@ -284,13 +285,14 @@ class IndexController {
                 lessonPlanRo: './pdfs/25.10/21_O3.2_Lesson Plan_Ferrari_Mechanics_Prancing_RO.docx',
             }, {
                 id: "18",
-                title: "Flora - Download App",
+                title: "Flora",
                 discipline: "Biology",
                 topic: "Plant fertilization and development",
                 ageGroup: "15-16",
                 lessonPlan: "TBD",
                 rowspan: 2,
-                link: "https://github.com/RaduStefan999/Biologie_VR",
+                link:"https://www.youtube.com/watch?v=2urkRb302OM",
+                link_download: "https://github.com/RaduStefan999/Biologie_VR",
                 lessonPlanUK: './pdfs/25.10/22_O3.2_Lesson plan_Fertilization in plants_EN.docx',
                 lessonPlanIt: './pdfs/25.10/22_O3.2_Lesson plan_Fertilization in plants_IT.docx',
                 lessonPlanLit: './pdfs/25.10/22_O3.2_Lesson plan_Fertilization in plants_LT.docx',
@@ -785,6 +787,16 @@ class IndexController {
                     link.setAttribute("href", row.link);
                     titleParent = link;
                     cell.appendChild(titleParent);
+
+                    if(row.link_download !== undefined && row.link_download !== ""){
+                        let br = document.createElement("br");
+                        cell.appendChild(br);
+                        
+                        link = document.createElement("a");
+                        link.setAttribute("href", row.link_download);
+                        link.innerText = "Download App";
+                        cell.appendChild(link);
+                    }
                 }
                 titleParent.innerText = row.title;
                 rowEl.appendChild(cell);
