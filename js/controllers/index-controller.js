@@ -137,7 +137,7 @@ class IndexController {
                 topic: "Caves",
                 ageGroup: "??",
                 lessonPlan: "TBD",
-                link: "./"
+                link: "./caves.html"
             }, {
                 id: "7",
                 title: "Chemical Reactions",
@@ -613,7 +613,7 @@ class IndexController {
                 topic: "Human settlements and their impact on environment",
                 ageGroup: "??",
                 lessonPlan: "TBD",
-                link: "./"
+                link: "./settlements.html"
             },{
                 id: "38.5",
                 title: "Synthesis of Aspirin",
