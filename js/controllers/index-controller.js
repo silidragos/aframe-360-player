@@ -731,7 +731,7 @@ class IndexController {
                 lessonPlanIt: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_IT.docx',
                 lessonPlanLit: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_LT.docx',
                 lessonPlanPor: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_PT.docx',
-                lessonPlanRo: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_RO.docx'
+                lessonPlanRo: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_RO.docx',
                 link: "./water-pollution.html"
             },{
                 id: "45",
