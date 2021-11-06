@@ -137,6 +137,11 @@ class IndexController {
                 topic: "Caves",
                 ageGroup: "??",
                 lessonPlan: "TBD",
+                lessonPlanUK: './pdfs/25.10/11_O3.2_Lesson plan_Caves_EN.docx',
+                lessonPlanIt: './pdfs/25.10/11_O3.2_Lesson plan_Caves_IT.docx',
+                lessonPlanLit: './pdfs/25.10/11_O3.2_Lesson plan_Caves_LT.docx',
+                lessonPlanPor: './pdfs/25.10/11_O3.2_Lesson plan_Caves_PT.docx',
+                lessonPlanRo: './pdfs/25.10/11_O3.2_Lesson plan_Caves_RO.docx',
                 link: "./caves.html"
             }, {
                 id: "7",
@@ -584,6 +589,11 @@ class IndexController {
                 topic: "Geographical layout of rivers, types of rivers, river anatomy, erosion, sedimentation",
                 ageGroup: "??",
                 lessonPlan: "Plasma. The 4th aggregation state of matter.",
+                lessonPlanUK: './pdfs/25.10/45_O3.2_Lesson plan_Rivers_EN.docx',
+                lessonPlanIt: './pdfs/25.10/45_O3.2_Lesson plan_Rivers_IT.docx',
+                lessonPlanLit: './pdfs/25.10/45_O3.2_Lesson plan_Rivers_LT.docx',
+                lessonPlanPor: './pdfs/25.10/45_O3.2_Lesson plan_Rivers_PT.docx',
+                lessonPlanRo: './pdfs/25.10/45_O3.2_Lesson plan_Rivers_RO.docx',
                 link: "./rivers.html",
             // },{
             //     id: "36",
@@ -613,6 +623,11 @@ class IndexController {
                 topic: "Human settlements and their impact on environment",
                 ageGroup: "??",
                 lessonPlan: "TBD",
+                lessonPlanUK: './pdfs/25.10/47_O3.2_Lesson plan_Shapes-of-settlements_EN.docx',
+                lessonPlanIt: './pdfs/25.10/47_O3.2_Lesson plan_Shapes-of-settlements_IT.docx',
+                lessonPlanLit: './pdfs/25.10/47_O3.2_Lesson plan_Shapes-of-settlements_LT.docx',
+                lessonPlanPor: './pdfs/25.10/47_O3.2_Lesson plan_Shapes-of-settlements_PT.docx',
+                lessonPlanRo: './pdfs/25.10/47_O3.2_Lesson plan_Shapes-of-settlements_RO.docx',
                 link: "./settlements.html"
             },{
                 id: "38.5",
@@ -712,6 +727,11 @@ class IndexController {
                 topic: "Water use statistics, water pollution, water impact agents, water footprint",
                 ageGroup: "??",
                 lessonPlan: "TBD",
+                lessonPlanUK: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_EN.docx',
+                lessonPlanIt: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_IT.docx',
+                lessonPlanLit: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_LT.docx',
+                lessonPlanPor: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_PT.docx',
+                lessonPlanRo: './pdfs/25.10/55_O3.2_Lesson plan_Water-pollution_RO.docx'
                 link: "./water-pollution.html"
             },{
                 id: "45",
